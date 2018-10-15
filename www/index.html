@@ -1,34 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Titel</title>
     <meta charset="utf-8">
+    <title>Breakout</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-<header>
 
-</header>
-
-    <nav>
-
-</nav>
-
-  <main>
-    <article>
-        <h1>Hej!</h1>
-    </article>
-    <aside>
-        <h1>How to</h1>
-      <h2>nodeJs console -> projectDir -> npm install</h2>
-      <h3>start server -> npm app</h3>
-      <h3>stop server -> ctrl+c     </h3>
-  
-    </aside>
-  </main>  
-  
-  <footer>
-
-  </footer>
-
+    <div class="score">SCORE: <span>00000</span></div>
+    <div class="lives">LIVES: <span>3</span></div>
+    <div class="ballX"><div class="ballY"></div></div>
+    <div class="paddle"></div>
+    <div class="game-over">GAME OVER - PRESS ENTER TO PLAY AGAIN</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
