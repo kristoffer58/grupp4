@@ -1,32 +1,43 @@
+$.getJSON('/json/instructions.json', start);
+
 function start(instrTrans){
 
-console.log('we have json');
-
-let ul = $('<ul/>');
+let ul = $('<ul class="instrSv"/>');
 for(let explanation in instrTrans){
-
-    // append - add something
-    // last inside me
-
     let li = $('<li/>');
-
-    for(let lnagSv of instrTrans[explanation].sv){
-      
-        li.append('<h4>' + lnagSv.desc + '</h4>');
+    for(let langSv of instrTrans[explanation].sv){
+        li.append('<h4>' + langSv.desc + '</h4>');
     }
+    
+    $('main').append(ul);
 
-    for(let lnagEn of instrTrans[explanation].en){
-        
-        li.append('<h4>' + lnagEn.desc + '</h4>');
+    // english instructions
+    ul = $('<ul class="instrEn"/>');
+for(let explanation in instrTrans){
+    let li = $('<li/>');
+    for(let langEn of instrTrans[explanation].en){
+        li.append('<h4>' + langEn.desc + '</h4>');
     }
-
     ul.append(li);
-
   }
-
   // jQuery grab the body element
   // and append the ul inside it
-  $('body').append(ul);
+  $('main').append(ul);
+}
 }
 
-$.getJSON('/json/instructions.json', start);
+$('#flagSv').hide();
+
+$('#flagSv').click(function(){
+  $('#flagEn').show();
+  $('.instrEn').hide();
+  $('.instrSv').show();
+  $('#flagSv').hide();
+});
+
+$('#flagEn').click(function(){
+  $('#flagSv').show();
+  $('.instrSv').hide();
+  $('.instrEn').show();
+  $('#flagEn').hide();
+});
