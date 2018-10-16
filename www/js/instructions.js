@@ -1,9 +1,9 @@
-function start(instructions){
-    
+function start(instrTrans){
+
 console.log('we have json');
 
 let ul = $('<ul/>');
-for(let explanation of instructions){
+for(let explanation of instrTrans){
 
     // append - add something
     // last inside me
