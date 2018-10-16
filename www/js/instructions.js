@@ -10,14 +10,14 @@ for(let explanation in instrTrans){
 
     let li = $('<li/>');
 
-    for(let lnag of instrTrans[explanation].sv){
+    for(let lnagSv of instrTrans[explanation].sv){
       
-        li.append('<h4>' + lnag.desc + '</h4>');
+        li.append('<h4>' + lnagSv.desc + '</h4>');
     }
 
-    for(let lnag of instrTrans[explanation].en){
+    for(let lnagEn of instrTrans[explanation].en){
         
-        li.append('<h4>' + lnag.desc + '</h4>');
+        li.append('<h4>' + lnagEn.desc + '</h4>');
     }
 
     ul.append(li);
