@@ -3,15 +3,22 @@ function start(instrTrans){
 console.log('we have json');
 
 let ul = $('<ul/>');
-for(let explanation of instrTrans){
+for(let explanation in instrTrans){
 
     // append - add something
     // last inside me
 
     let li = $('<li/>');
-    li.append('<h4>' + explanation.desc + '</h4>');
 
-    li.append('<p class="none-yet">' + explanation.desc + '</p>');
+    for(let lnag of instrTrans[explanation].sv){
+      
+        li.append('<h4>' + lnag.desc + '</h4>');
+    }
+
+    for(let lnag of instrTrans[explanation].en){
+        
+        li.append('<h4>' + lnag.desc + '</h4>');
+    }
 
     ul.append(li);
 
