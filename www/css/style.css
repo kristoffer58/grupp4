@@ -7393,4 +7393,19 @@ nav a {
 .navbar-nav {
   margin: 0 auto; }
 
+.langSv {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .langSv p {
+    margin: 0; }
+
+.langEn {
+  list-style-type: none;
+  display: none;
+  margin: 0;
+  padding: 0; }
+  .langEn p {
+    margin: 0; }
+
 /*# sourceMappingURL=style.css.map */
