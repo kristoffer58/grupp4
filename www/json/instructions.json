@@ -2,7 +2,7 @@
     "instructions": {
     "en": [
         {
-            "desc": "A brick wall appears at the top of the screen, and your mission is to smash it off the playfield - one brick at a time.\n\nUse the arrow keys to move the paddle across the bottom of the screen. With the paddle, hit the ball into the wall. Each time the ball hits a brick, the brick disappears and you score points.\n\nA player recieves five balls (lives) per game. When you miss a ball with your paddle, the ball disappears from the screen and another one appears until all of your five balls are lost."
+            "desc": "A brick wall appears at the top of the screen, and your mission is to smash it off the playfield - one brick at a time.\n \n Use the arrow keys to move the paddle across the bottom of the screen. With the paddle, hit the ball into the wall. Each time the ball hits a brick, the brick disappears and you score points.\n \n A player recieves five balls (lives) per game. When you miss a ball with your paddle, the ball disappears from the screen and another one appears until all of your five balls are lost."
         }
         ],
       "sv": [

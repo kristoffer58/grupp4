@@ -1,0 +1,14 @@
+{
+    "tryMeButton": {
+    "en": [
+        {
+            "name": "Try It Out"
+        }
+        ],
+    "sv": [
+        {
+            "name": "Testa spelet"
+        }
+        ]
+    }
+}
