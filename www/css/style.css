@@ -7408,6 +7408,9 @@ nav a {
   .langEn p {
     margin: 0; }
 
+.engelska {
+  display: none; }
+
 html {
   height: 100%; }
 
