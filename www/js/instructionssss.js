@@ -1,4 +1,3 @@
-$.getJSON('/json/instructions.json', start);
 function start(instrTrans) {
     let ul = $('<ul class="instrSv"/>');
     for (let explanation in instrTrans) {
