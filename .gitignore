@@ -63,3 +63,5 @@ typings/
 
 
 www/css/
+
+.DS_Store
