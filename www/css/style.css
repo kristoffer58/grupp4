@@ -7393,6 +7393,9 @@ nav a {
 .navbar-nav {
   margin: 0 auto; }
 
+.historySv {
+  display: none; }
+
 .langSv {
   list-style-type: none;
   margin: 0;
