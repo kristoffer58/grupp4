@@ -1,4 +1,4 @@
-$.getJSON('/json/nav.json', function (navData) {
+$.getJSON('/json/navFot.json', function (navData) {
     start(navData, true);
   });
   let navMenu = '';
