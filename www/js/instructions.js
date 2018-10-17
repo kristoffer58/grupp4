@@ -6,7 +6,7 @@ let ul = $('<ul class="instrSv"/>');
 for(let explanation in instrTrans){
     let li = $('<li/>');
     for(let langSv of instrTrans[explanation].sv){
-        li.append('<h4>' + langSv.desc + '</h4>');
+        li.append(langSv.desc);
     }
     
     $('main').append(ul);
@@ -16,7 +16,7 @@ for(let explanation in instrTrans){
 for(let explanation in instrTrans){
     let li = $('<li/>');
     for(let langEn of instrTrans[explanation].en){
-        li.append('<h4>' + langEn.desc + '</h4>');
+        li.append(langEn.desc);
     }
     ul.append(li);
   }
