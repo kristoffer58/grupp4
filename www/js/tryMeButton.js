@@ -57,13 +57,9 @@ $.getJSON('/json/tryMeButton.json', start);
 $('.engelska').click(function(){
     $('.langSv').hide();
     $('.langEn').show();
-    $('.sverige').show();
-    $('.engelska').hide();
 });
 
 $('.sverige').click(function(){
     $('.langEn').hide();
     $('.langSv').show();
-    $('.engelska').show();
-    $('.sverige').hide();
 });
