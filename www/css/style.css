@@ -7393,8 +7393,14 @@ nav a {
 .navbar-nav {
   margin: 0 auto; }
 
-.historySv {
+.historyEn {
   display: none; }
+
+#flagEn {
+  display: none; }
+
+.historySv, .historyEn {
+  list-style-type: none; }
 
 .langSv {
   list-style-type: none;

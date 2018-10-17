@@ -39,21 +39,17 @@ function start(historyTrans) {
   }
 }
 
-
-$('#flagSv').hide();
-
-
 $('#flagSv').click(function () {
-  $('#flagEn').show();
-  $('.historyEn').hide();
-  $('.historySv').show();
+  $('.historyEn').show();
+  $('.historySv').hide();
   $('#flagSv').hide();
+  $('#flagEn').show();
 });
 
 $('#flagEn').click(function () {
-  $('#flagEn').hide();
-  $('.historyEn').show();
-  $('.historySv').hide();
+  $('.historyEn').hide();
+  $('.historySv').show();
   $('#flagSv').show();
+  $('#flagEn').hide();
 });
 
