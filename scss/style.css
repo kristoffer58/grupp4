@@ -7477,5 +7477,12 @@ html {
     top: 0; }
   100% {
     top: calc(100% - 40px); } }
+@font-face {
+  font-family: "ARCADECLASSIC";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/ARCADECLASSIC.ttf") format("opentype"); }
+a {
+  font-family: 'ARCADECLASSIC','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
