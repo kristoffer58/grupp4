@@ -39,17 +39,21 @@ function start(historyTrans) {
   }
 }
 
+
+$('#flagSv').hide();
+
+
 $('#flagSv').click(function () {
-  $('.historyEn').show();
-  $('.historySv').hide();
-  $('#flagSv').hide();
   $('#flagEn').show();
+  $('.historyEn').hide();
+  $('.historySv').show();
+  $('#flagSv').hide();
 });
 
 $('#flagEn').click(function () {
-  $('.historyEn').hide();
-  $('.historySv').show();
-  $('#flagSv').show();
   $('#flagEn').hide();
+  $('.historyEn').show();
+  $('.historySv').hide();
+  $('#flagSv').show();
 });
 
