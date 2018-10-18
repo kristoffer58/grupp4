@@ -6,12 +6,12 @@ function start(historyTrans) {
   jsonData = historyTrans;
   let lang = languageIsSwedish ? 'sv' : 'en';
 
-  $('.history h4').text(historyTrans.title[lang]);
+  $('.historic h4').text(historyTrans.title[lang]);
 
-  $('.history article').empty();
+  $('.historic article').empty();
   for (let text of historyTrans.text[lang]) {
     let pTag = '<p>' + text + '</p>';
-    $('.history article').append(pTag);
+    $('.historic article').append(pTag);
   }
 }
 
