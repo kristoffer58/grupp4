@@ -2,11 +2,13 @@
     "tryMeButton": {
     "en": [
         {
+            "head":"If you what to try different versions of breakout you can try some of the versions below.",
             "name": "Try It Out"
         }
         ],
     "sv": [
         {
+            "head": "Om du vill testa andra versioner av breakout kan du testa någon av versionerna nedan.",
             "name": "Testa spelet"
         }
         ]
