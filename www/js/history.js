@@ -1,8 +1,8 @@
-$.getJSON('/json/history.json', start);
+$.getJSON('/json/history.json', write);
 let jsonData;
 let languageIsSwedish = true;
 
-function start(historyTrans) {
+function write(historyTrans) {
   jsonData = historyTrans;
   let lang = languageIsSwedish ? 'sv' : 'en';
 
@@ -19,5 +19,5 @@ $('#flagSv, #flagEn').click(function () {
   $('#flagEn').toggle();
   $('#flagSv').toggle();
   languageIsSwedish = !languageIsSwedish;
-  start(jsonData);
+  write(jsonData);
 });
