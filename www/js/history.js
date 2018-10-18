@@ -1,6 +1,5 @@
 $.getJSON('/json/history.json', write);
 let jsonData;
-let languageIsSwedish = true;
 
 function write(historyTrans) {
   jsonData = historyTrans;
