@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static('www'));
 // Start the web server on port ...
 const port=3000;
-console.log(require('os').networkInterfaces());
+//console.log(require('os').networkInterfaces());
 
 app.listen(port,() => console.log('Listening on port '+port));
 const Sass = require('./sass');
