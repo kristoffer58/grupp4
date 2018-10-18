@@ -1,59 +1,23 @@
 $.getJSON('/json/history.json', start);
-
-let translateSv = {
-  "A brief history of Breakout": 'En kort historia i Breakout',
-}
+let jsonData;
+let languageIsSwedish = true;
 
 function start(historyTrans) {
+  jsonData = historyTrans;
+  let lang = languageIsSwedish ? 'sv' : 'en';
 
-  let ul = $('<ul class="historySv"/>');
+  $('.history h4').text(historyTrans.title[lang]);
 
-  for (let explanation in historyTrans) {
-    let li = $('<li/>');
-
-    for (let langSv of historyTrans[explanation].sv) {
-      
-      li.append('<p>' + langSv + '</p>');
-      ul.append(li);
-    
-      $('main').append(ul);
-    }
-  }
-
-  // english instructions
-  ul = $('<ul class="historyEn"/>');
-
-  for (let explanation in historyTrans) {
-    li = $('<li/>');
-    for (let langEn of historyTrans[explanation].en) {
-     
-      li.append('<p>' + langEn + '</p>');
-
-      ul.append(li);
-    
-
-    // jQuery grab the body element
-    // and append the ul inside it
-    $('main').append(ul);
-    }
+  $('.history article').empty();
+  for (let text of historyTrans.text[lang]) {
+    let pTag = '<p>' + text + '</p>';
+    $('.history article').append(pTag);
   }
 }
 
-
-$('#flagSv').hide();
-
-
-$('#flagSv').click(function () {
-  $('#flagEn').show();
-  $('.historyEn').hide();
-  $('.historySv').show();
-  $('#flagSv').hide();
+$('#flagSv, #flagEn').click(function () {
+  $('#flagEn').toggle();
+  $('#flagSv').toggle();
+  languageIsSwedish = !languageIsSwedish;
+  start(jsonData);
 });
-
-$('#flagEn').click(function () {
-  $('#flagEn').hide();
-  $('.historyEn').show();
-  $('.historySv').hide();
-  $('#flagSv').show();
-});
-
