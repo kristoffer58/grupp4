@@ -14,9 +14,14 @@ function write(historyTrans) {
   }
 }
 
-$('#flagSv, #flagEn').click(function () {
-  $('#flagEn').toggle();
-  $('#flagSv').toggle();
+$('.engelska').click(function () {
+
+   
+  languageIsSwedish = !languageIsSwedish;
+  write(jsonData);
+});
+$('.sverige').click(function () {
+
   languageIsSwedish = !languageIsSwedish;
   write(jsonData);
 });
