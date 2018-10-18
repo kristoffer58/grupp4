@@ -1,6 +1,6 @@
 $.getJSON('/json/history.json', write);
 let jsonData;
-
+let languageIsSwedish;
 function write(historyTrans) {
   jsonData = historyTrans;
   let lang = languageIsSwedish ? 'sv' : 'en';
@@ -14,16 +14,16 @@ function write(historyTrans) {
   }
 }
 
-/*$('#flagSv, #flagEn').click(function () {
+$('#flagSv, #flagEn').click(function () {
   $('#flagEn').toggle();
   $('#flagSv').toggle();
   languageIsSwedish = !languageIsSwedish;
   write(jsonData);
-});*/
-
+});
+/*
 $('.engelska, .sverige').click(function () {
   $('.engelska').toggle();
   $('.sverige').toggle();
   languageIsSwedish = !languageIsSwedish;
   write(jsonData);
-});
+});*/
