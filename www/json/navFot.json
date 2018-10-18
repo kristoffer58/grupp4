@@ -1,0 +1,22 @@
+{
+    "en": {
+      "home": "Home",
+      "history": "History",
+      "play-game": "Play Games",
+      "address": "Address",
+      "phone": "Phone number",
+      "custom": "Customer service",
+      "reservation": "Reservation",
+      "mail": "E-mail"
+    },
+    "sv": {
+      "home": "Start",
+      "history": "Historia",
+      "play-game": "Spela",
+      "address": "Adress",
+      "phone": "Telefonnummer",
+      "custom": "Kundservice: ",
+      "reservation": "Bokning: ",
+      "mail": "E-post"
+    }
+  }
