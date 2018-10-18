@@ -1,11 +1,7 @@
-.historyEn {
+.historySv {
   display: none;
 }
 
-#flagEn{
-  display:none;
-}
-
-.historySv, .historyEn {
-  list-style-type: none;
+.historySv .historyEn {
+  $list-style-type: none;
 }
