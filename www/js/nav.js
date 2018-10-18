@@ -13,10 +13,10 @@ $.getJSON('/json/navFot.json', function (navData) {
       $('.'+className).text(languageObject[className])
     }
   }
-  $('.engelska').on('click', function () {
+  $('#engelska').on('click', function () {
     start(navMenu, false);
   });
-  $('.sverige').on('click', function () {
+  $('#svenska').on('click', function () {
     start(navMenu, true);
   });
 

@@ -14,17 +14,15 @@ function write(historyTrans) {
   }
 }
 
-$('.engelska').click(function () {
-
+$('.flag').click(function () {
+  $('#engelska').toggle();
+  $('#sverige').toggle();
+  
    
   languageIsSwedish = !languageIsSwedish;
   write(jsonData);
 });
-$('.sverige').click(function () {
 
-  languageIsSwedish = !languageIsSwedish;
-  write(jsonData);
-});
 /*
 $('.engelska, .sverige').click(function () {
   $('.engelska').toggle();

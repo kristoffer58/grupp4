@@ -8,7 +8,7 @@ function start(button){
         }
         ul.append(li);
         $('main .card-body a').append(ul);
-    
+
         ul = $('<ul class = "langEn"/>');
         for(let tryGame in button){
           let li = $('<li/>');
@@ -24,12 +24,13 @@ function start(button){
 $.getJSON('/json/tryMeButton.json', start);
 
 
-$('.engelska').click(function(){
+
+$('#engelska').click(function(){
     $('.langSv').hide();
     $('.langEn').show();
 });
 
-$('.sverige').click(function(){
+$('#svenska').click(function(){
     $('.langEn').hide();
     $('.langSv').show();
 });
