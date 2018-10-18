@@ -10,3 +10,10 @@ const port=3000;
 console.log(require('os').networkInterfaces());
 
 app.listen(port,() => console.log('Listening on port '+port));
+const Sass = require('./sass');
+const config = require('./config.json');
+
+for(let conf of config.sass){
+    new Sass(conf);
+}
+
