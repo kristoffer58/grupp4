@@ -22,9 +22,9 @@ $(document).on('click', 'a', function(e){
   // The router (do whatever you want here)
   function frontendRouter(path){
     let routes = {
-      '/': () => { $('body main > *').hide(); $('.start-page').show(); },
-      '/about': () => { $('body main > *').hide(); $('.about').show(); },
-      '/cool': () => { $('body main > *').hide(); $('.cool').show(); },
+      '/': () => { $('body main > *').hide(); $('.Start').show(); },
+      '/history': () => { $('body main > *').hide(); $('.Historia').show(); },
+      '/game': () => { $('body main > *').hide(); $('.Spela').show(); },
       '/404': () => { $('body main > *').hide(); $('.the404').show(); },
     };
     // no path found then change path to '/404';
