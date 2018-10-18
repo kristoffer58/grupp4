@@ -21,3 +21,10 @@ function write(historyTrans) {
   languageIsSwedish = !languageIsSwedish;
   write(jsonData);
 });*/
+
+$('.engelska, .sverige').click(function () {
+  $('.engelska').toggle();
+  $('.sverige').toggle();
+  languageIsSwedish = !languageIsSwedish;
+  write(jsonData);
+});
