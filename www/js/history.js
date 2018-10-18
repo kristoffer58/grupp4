@@ -15,9 +15,9 @@ function write(historyTrans) {
   }
 }
 
-$('#flagSv, #flagEn').click(function () {
+/*$('#flagSv, #flagEn').click(function () {
   $('#flagEn').toggle();
   $('#flagSv').toggle();
   languageIsSwedish = !languageIsSwedish;
   write(jsonData);
-});
+});*/
