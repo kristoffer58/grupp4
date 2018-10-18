@@ -15,15 +15,10 @@ $.getJSON('/json/navFot.json', function (navData) {
   }
   $('.engelska').on('click', function () {
     start(navMenu, false);
-    $('.engelska').hide();
-    $('.sverige').show();
   });
   $('.sverige').on('click', function () {
     start(navMenu, true);
-    $('.sverige').hide();
-    $('.engelska').show();
   });
-  $('.sverige').hide();
   
   // Class active follow the click on links 
   $(".nav-link").on("click", function () {
