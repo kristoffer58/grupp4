@@ -17,3 +17,10 @@ for(let conf of config.sass){
     new Sass(conf);
 }
 
+// Serve the index page everywhere so that the
+// frontend router can decide what to do
+
+const path = require('path');
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './www/index.html'));
+});
