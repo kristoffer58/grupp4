@@ -11,10 +11,8 @@
 
 @import '_history';
 
-@import 'instructions';
+@import '_instructions';
 
-@import 'start';
+@import '_start';
 
-@import 'game';
-
-$grid-columns:24;
+@import '_game';
