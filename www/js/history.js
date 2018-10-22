@@ -23,10 +23,3 @@ $('.flag').click(function () {
   write(jsonData);
 });
 
-/*
-$('.engelska, .sverige').click(function () {
-  $('.engelska').toggle();
-  $('.sverige').toggle();
-  languageIsSwedish = !languageIsSwedish;
-  write(jsonData);
-});*/
