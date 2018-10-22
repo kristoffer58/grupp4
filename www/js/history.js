@@ -1,11 +1,12 @@
 $.getJSON('/json/history.json', write);
 let jsonData;
-let languageIsSwedish;
+let languageIsSwedish = true;
+
 function write(historyTrans) {
   jsonData = historyTrans;
   let lang = languageIsSwedish ? 'sv' : 'en';
 
-  $('.historic h4').text(historyTrans.title[lang]);
+  $('.historic h1').text(historyTrans.title[lang]);
 
   $('.historic article').empty();
   for (let text of historyTrans.text[lang]) {
@@ -17,8 +18,6 @@ function write(historyTrans) {
 $('.flag').click(function () {
   $('#engelska').toggle();
   $('#sverige').toggle();
-  
-   
   languageIsSwedish = !languageIsSwedish;
   write(jsonData);
 });
