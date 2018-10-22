@@ -27,6 +27,8 @@ $(document).on('click', 'a', function(e){
       '/game': () => { $('body main > *').hide(); $('.Spela').show(); },
       '/404': () => { $('body main > *').hide(); $('.the404').show(); },
     };
+    $('nav li a').removeClass('active');
+    $('nav li a[href="' + path + '"]').addClass('active');
     // no path found then change path to '/404';
     path = routes[path] ? path : '/404';
     // run the function associated with the path
