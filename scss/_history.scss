@@ -5,43 +5,44 @@
     padding-bottom: 20px;
   }
 
-.Historia {
-  display: inline-block;
-  padding: 33px;
-}
-
+  main {
+    margin: 30px;
+    padding-right: 33px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+  }
+  
+  h1 {
+    padding-top: 40px;
+    font-size: 29px;
+    font-weight: 900;
+  }
 
   .historic {
-    display: inline-block;
-    padding: 33px;
-  }
+    line-height: 2;
+    padding-right: 40px;
 
-  h1 {
-    padding-left: 33px;
-    font-size: 29px;
+  }
   
-  }
-  article {
-    display: inline-block;
-    padding-left: 33px;
-    padding-top: 20px;
-  }
   h2 {
-    display: inline-block;
+    display: block;
+    padding-left: 20px;
     padding-top: 40px;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 900;
    
   }
   .carousel {
       display: inline-block;
-      justify-content: center;
-      
+      padding-left: 41 px;
+      padding-top: 18px;
   }
-  .flyerPic{
-    text-align: center;
-    padding-top: 20px;
-    display: inline-block;
-    justify-content: center;
+
+  .flyerPic, .flyerPic2 {
+    padding-top: 25px;
+    display: block;
+    margin-right: 0;
   }
+
   
 

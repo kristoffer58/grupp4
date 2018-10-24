@@ -1,33 +1,29 @@
-html {
-    height: 100%;
-  }
-  
-  .game {
-    margin: 0;
-    height: 100%;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
+.game {
+  position: relative;
+  background-color: #000;
+  color: white;
+  height: 100%;
+   
   .score {
     position: absolute;
-    top: 5px;;
+    top: 5px;
     right: 10px;
   }
-  
+   
   .lives {
     position: absolute;
-    top: 5px;;
+    top: 5px;
     left: 10px;
   }
-  
-  .game-over {
+   
+  .main-text {
     display:none;
     position: absolute;
     width: 100%;
     text-align: center;
     top: 150px;
   }
-  
+   
   .paddle {
     width: 200px;
     height: 30px;
@@ -36,7 +32,48 @@ html {
     z-index: 1;
     bottom: 0;
   }
+   
+  .brick {
+    left: 300px;
+    top: 200px;
+    width: 50px;
+    height: 20px;
+    background-color: #777;
+    position: absolute;
+    z-index: 1;
+  }
+   
+  .ball {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  .game-over {
+    display:none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 150px;
+  }
+
+  .ball-paused {
+    animation-play-state: paused;
+  }
   
+  @keyframes ball-animation-horizontal {
+    0%   {left: 0}
+    100%  {left: calc(100% - 40px)}
+  }
+  
+  @keyframes ball-animation-vertical {
+    0%   {top: 0}
+    100%  {top: calc(100% - 40px)}
+  }
+
+  /*
   .ballX {
     position: absolute;
     height: 100%;
@@ -53,16 +90,7 @@ html {
     animation: ball-animation-vertical 5s linear infinite alternate;
   }
   
-  .ball-paused {
-    animation-play-state: paused;
-  }
+  */
+
   
-  @keyframes ball-animation-horizontal {
-    0%   {left: 0}
-    100%  {left: calc(100% - 40px)}
-  }
-  
-  @keyframes ball-animation-vertical {
-    0%   {top: 0}
-    100%  {top: calc(100% - 40px)}
-  }
+}
