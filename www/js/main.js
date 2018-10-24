@@ -52,6 +52,7 @@ function frontendRouter(path) {
 
     },
   };
+  
   $('nav li a').removeClass('active');
   $('nav li a[href="' + path + '"]').addClass('active');
   // no path found then change path to '/404';
