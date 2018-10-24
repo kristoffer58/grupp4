@@ -1,5 +1,8 @@
 body {
   background-color: #f5e4b4;
+  margin: 0;
+  height: 100%;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 //sticky footer
@@ -22,10 +25,4 @@ main {
 
 html {
   height: 100%;
-}
-
-body {
-  margin: 0;
-  height: 100%;
-  font-family: 'Courier New', Courier, monospace;
 }
