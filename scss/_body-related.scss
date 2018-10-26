@@ -1,8 +1,15 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+
 body {
-  background-color: #f5e4b4;
   margin: 0;
   height: 100%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Orbitron';
+  background-image: url("/images/bg-2.jpg");
+  background-size: fixed;
+  background-repeat: no-repeat;
 }
 
 //sticky footer
@@ -13,10 +20,10 @@ body {
 }
 main {
   flex: 1;
+  text-align: center;
 }
 #engelska{
  position: absolute;
-
 }
 #sverige{
   position: absolute;
