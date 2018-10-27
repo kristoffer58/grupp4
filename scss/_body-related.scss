@@ -8,8 +8,13 @@ body {
   height: 100%;
   font-family: 'Orbitron';
   background-image: url("/images/bg-2.jpg");
-  background-size: fixed;
+  background-size: 100% cover;
   background-repeat: no-repeat;
+}
+
+//coloring navbar. changed name of class from 'bg-dark' to 'bg-retro'. Same class used in footer.
+.bg-retro {
+  background-color: rgba(26, 14, 73, 0.7);
 }
 
 //sticky footer
@@ -28,7 +33,6 @@ main {
 #sverige{
   position: absolute;
 }
-
 
 html {
   height: 100%;
