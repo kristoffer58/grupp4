@@ -10,6 +10,8 @@ function loadGame() {
   const paddle = {};
   const ball = {};
   let gameBorders = loadGameBorders();
+  let hitSound = new Audio('/sounds/hit.wav')
+  let liveLost = new Audio('/sounds/liveLost.wav')
 
   // Setup key listeners before starting the first game
   setupKeyListeners();
@@ -69,6 +71,7 @@ function loadGame() {
     paused = true;
     updateInterface();
     resetBall();
+    liveLost.play();
   }
 
   function collisionDetectBallAndGame() {
@@ -96,6 +99,7 @@ function loadGame() {
       ball.top = paddle.top - ball.height;
       score += 5;
       updateInterface();
+      hitSound.play();
     }
   }
 
@@ -114,6 +118,7 @@ function loadGame() {
         bricks.splice(i, 1);
         score += 20;
         updateInterface();
+        hitSound.play();
       }
     }
     if (bricks.length == 0) {
