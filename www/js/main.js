@@ -24,27 +24,15 @@ function frontendRouter(path) {
   let routes = {
     '/': () => {
       $('body main > *').hide(); $('.Start').show();
-      //this will be optimized changes current site to active in navbar
-      $('.history').removeClass('active');
-      $('.play-game').removeClass('active');
-      $('.home').addClass('active');
-      changeActiveLink('/');
+      changeActiveLink('home');
     },
     '/history': () => {
       $('body main > *').hide(); $('.Historia').show();
-      //this will be optimized changes current site to active in navbar
-      $('.home').removeClass('active');
-      $('.play-game').removeClass('active');
-      $('.history').addClass('active');
-      changeActiveLink('/');
+      changeActiveLink('history');
     },
     '/game': () => {
       $('body main > *').hide(); $('.Spela').show();
-      //this will be optimized changes current site to active in navbar
-      $('.home').removeClass('active');
-      $('.history').removeClass('active');
-      $('.play-game').addClass('active');
-      changeActiveLink('/');
+      changeActiveLink('play-game');
       loadGame();
     },
     '/404': () => {
@@ -61,12 +49,10 @@ function frontendRouter(path) {
   routes[path]();
 }
 
-
-//Still working on it Lukas
-// optymized ver of active class change in nav bar 
 function changeActiveLink(activeLink) {
-
-  let links = $("a").toArray();
-  console.log(links.toString());
-
+  let links = $("nav a");
+  for(link in links){
+    $(link).removeClass('active');
+  }
+  $(activeLink).addClass('active');
 }
