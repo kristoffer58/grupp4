@@ -1,28 +1,19 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+
 body {
-  background-color: #f5e4b4;
   margin: 0;
   height: 100%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Orbitron';
+  background-image: url("/images/bg-2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-//sticky footer
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-main {
-  flex: 1;
-}
-#engelska{
- position: absolute;
-
-}
-#sverige{
-  position: absolute;
+//coloring navbar. changed name of class from 'bg-dark' to 'bg-retro'. Same class used in footer.
+.bg-retro {
+  background-color: rgba(26, 14, 73, 0.7);
 }
 
-
-html {
-  height: 100%;
-}

@@ -31,9 +31,8 @@ function frontendRouter(path) {
       changeActiveLink('history');
     },
     '/game': () => {
-      $('body main > *').hide(); $('.Spela').show();
+      $('body main > *').hide(); $('.play-game').show();
       changeActiveLink('play-game');
-      loadGame();
     },
     '/404': () => {
       $('body main > *').hide(); $('.the404').show();

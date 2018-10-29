@@ -1,0 +1,26 @@
+//sticky footer
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+#engelska{
+ position: absolute;
+}
+#sverige{
+  position: absolute;
+}
+
+html {
+  height: 100%;
+}
+
+footer {
+  @include media-breakpoint-down(md) {
+    font-size: 12px;
+  }
+}
