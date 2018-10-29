@@ -10,7 +10,7 @@ $('.startGame').click(function loadGame() {
   const bricks = [];
   const keysPressed = {};
   const initialPaddleSpeed = 300;
-  const initialBallSpeed = 320;
+  const initialBallSpeed = 200;
   const paddle = {};
   const ball = {};
   let gameBorders = loadGameBorders();
