@@ -1,4 +1,8 @@
-function loadGame() {
+$('.startGame').click(function loadGame() {
+
+  $('.startsida').hide();
+  $('.game').show();
+
   // Main variables
   let lives;
   let score;
@@ -281,4 +285,4 @@ function loadGame() {
       }, updateSpeed);
     }, 1000);
   }
-}
+});
