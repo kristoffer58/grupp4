@@ -25,17 +25,3 @@ function instructions(instrTrans) {
 
     $.getJSON('/json/instructions.json', instructions);
 
-    $('#flagSv').click(function () {
-        $('#flagEn').show();
-        $('.instrEn').hide();
-        $('.instrSv').show();
-        $('#flagSv').hide();
-    });
-
-    $('#flagEn').click(function () {
-        $('#flagSv').show();
-        $('.instrSv').hide();
-        $('.instrEn').show();
-        $('#flagEn').hide();
-    });
-
