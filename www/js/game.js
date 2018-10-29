@@ -286,3 +286,9 @@ $('.startGame').click(function loadGame() {
     }, 1000);
   }
 });
+
+$('.play-game').click(function loadGame() {
+
+  $('.startsida').show();
+  $('.game').hide();
+});
