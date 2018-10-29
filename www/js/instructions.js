@@ -23,5 +23,5 @@ function instructions(instrTrans) {
     }
 }
 
-    $.getJSON('/json/instructions.json', instructions);
+$.getJSON('/json/instructions.json', instructions);
 
