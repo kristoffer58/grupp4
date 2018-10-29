@@ -1,4 +1,6 @@
-$('.startGame').click(function loadGame() {
+$('.startGame').click(loadGame);
+
+function loadGame() {
 
   $('.startsida').hide();
   $('.game').show();
@@ -285,4 +287,4 @@ $('.startGame').click(function loadGame() {
       }, updateSpeed);
     }, 1000);
   }
-});
+}
