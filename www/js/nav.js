@@ -10,7 +10,8 @@ $.getJSON('/json/navFot.json', function (navData) {
       languageObject = navData.sv
     }
     for (let className in languageObject) {
-      $('footer .'+ className).text(languageObject[className])
+      $('nav .' + className + ', footer .' + className).text(languageObject[className])
+      // example result: 'nav .home, footer .home'
     }
   }
   $('#engelska').on('click', function () {
