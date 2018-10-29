@@ -1,15 +1,14 @@
 {
-    "instructions": {
-    "en": [
-        {
-            "desc": "A brick wall appears at the top of the screen, and your mission is to smash it off the playfield - one brick at a time.\n \n Use the arrow keys to move the paddle across the bottom of the screen. With the paddle, hit the ball into the wall. Each time the ball hits a brick, the brick disappears and you score points.\n \n A player recieves five balls (lives) per game. When you miss a ball with your paddle, the ball disappears from the screen and another one appears until all of your five balls are lost."
-        }
-        ],
-      "sv": [
-        {
-          "desc": "En tegelvägg dyker upp på toppen av skärmen och ditt uppdrag är att förstöra den - en tegelsten åt gången.\n\n Använd piltangenterna för att röra plattan längs botten av skärmen. Med plattan ska du sikta och träffa tegelväggen. Varje gång du träffar en tegelsten, så försvinner den och du får poäng.\n\nEn spelare har fem bollar (liv) per spelomgång. När du missar bollen med din platta, så försvinner bollen från skärmen och nästa boll spelas tills du förlorat alla fem."
-        }
-      ]
-    }
+  "instructions": {
+  "en": [
+      {
+          "desc": "A brick wall appears at the top of the screen, and your mission is to smash it off the playfield - one brick at a time. Use the arrow keys to move the paddle across the bottom of the screen. With the paddle, hit the ball into the wall. Each time the ball hits a brick, the brick disappears and you score points. A player recieves five balls (lives) per game. When you miss a ball with your paddle, the ball disappears from the screen and another one appears until all of your five balls are lost."
+      }
+      ],
+    "sv": [
+      {
+        "desc": "En tegelvägg dyker upp på toppen av skärmen och ditt uppdrag är att förstöra den - en tegelsten åt gången. Använd piltangenterna för att röra plattan längs botten av skärmen. Med plattan ska du sikta och träffa tegelväggen. Varje gång du träffar en tegelsten, så försvinner den och du får poäng. En spelare har fem bollar (liv) per spelomgång. När du missar bollen med din platta, så försvinner bollen från skärmen och nästa boll spelas tills du förlorat alla fem."
+      }
+    ]
+  }
 }
-   
