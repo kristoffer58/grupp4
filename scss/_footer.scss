@@ -1,0 +1,21 @@
+//sticky footer
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  text-align: center;
+}
+
+#engelska{
+ position: absolute;
+}
+#sverige{
+  position: absolute;
+}
+
+html {
+  height: 100%;
+}
