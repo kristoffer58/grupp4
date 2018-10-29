@@ -1,4 +1,4 @@
-function start(instrTrans) {
+function instructions(instrTrans) {
     // swedish instructions
     let ul = $('<ul class="instrSv"/>');
     for (let explanation in instrTrans) {
@@ -23,7 +23,7 @@ function start(instrTrans) {
     }
 }
 
-    $.getJSON('/json/instructions.json', start);
+    $.getJSON('/json/instructions.json', instructions);
 
     $('#flagSv').click(function () {
         $('#flagEn').show();

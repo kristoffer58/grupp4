@@ -179,12 +179,34 @@
             </div>
 
             <div class='startsida'>
-                    <h1>Breakout</h1>
-                    <p class='startGame'>Start</p>
-                    <p class='highScore'>High Score</p>
-                    <p class='instructions'>Instructions</p>
-                </div>
+				<h1>Breakout</h1>
+				<p class='startGame'>Start</p>
+				<p class='highScore'>High Score</p>
+				<p class="Instructions" data-toggle="modal" data-target="#instructionsModalCenter">Instructions</p>
+				<div class="modal fade" id="instructionsModalCenter" tabindex="-1" role="dialog" aria-labelledby="instructionsModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						  <div class="modal-content">
+							<div class="modal-header">
+							  <h5 class="modal-title" id="instructionsModalLongTitle">Modal title</h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="modal-body">
+								<!-- get instructions.json -->
+							  ...
+							</div>
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						  </div>
+						</div>
+					  </div>
+			</div>
 		</section>
+
+
+
 	</main>
 	<footer class="container-fluid bg-retro mt-4 text-light p-4">
 		<div class="row mx-auto">
@@ -219,6 +241,7 @@
 	<script src="/js/nav.js"></script>
 	<script src="/js/game.js"></script>
 	<script src="/js/history.js"></script>
+	<script src="/js/instructions.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/startsidaGame.js"></script>
 </body>

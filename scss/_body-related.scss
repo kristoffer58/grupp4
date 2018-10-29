@@ -5,11 +5,10 @@
 
 body {
   margin: 0;
-  height: 100%;
   font-family: 'Orbitron';
   background-image: url("/images/bg-2.jpg");
-  background-size: 100% cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 //coloring navbar. changed name of class from 'bg-dark' to 'bg-retro'. Same class used in footer.
