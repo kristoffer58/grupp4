@@ -1,6 +1,6 @@
 function instructions(instrTrans) {
     // swedish instructions
-    let ul = $('<ul class="instrSv"/>');
+    let ul = $('<ul class="langSv"/>');
     for (let explanation in instrTrans) {
         let li = $('<li/>');
         for (let langSv of instrTrans[explanation].sv) {
@@ -11,7 +11,7 @@ function instructions(instrTrans) {
 
 
         // english instructions
-        ul = $('<ul class="instrEn"/>');
+        ul = $('<ul class="langEn"/>');
         for (let explanation in instrTrans) {
             let li = $('<li/>');
             for (let langEn of instrTrans[explanation].en) {
