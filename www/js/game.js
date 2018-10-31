@@ -288,3 +288,9 @@ function loadGame() {
     }, 1000);
   }
 }
+
+$('.play-game').click(function() {
+
+  $('.startsida').show();
+  $('.game').hide();
+});
