@@ -1,11 +1,13 @@
-$('.startGame, .play').click(function loadGame() {
+$('.startGame').click(loadGame);
+let score;
+
+function loadGame() {
 
   $('.startsida, .highscore').hide();
   $('.game').show();
 
   // Main variables
   let lives;
-  let score;
   let paused;
   const bricks = [];
   const keysPressed = {};
@@ -195,7 +197,7 @@ $('.startGame, .play').click(function loadGame() {
     });
   }
 
-  function loadGameBorders(){
+  function loadGameBorders() {
     return {
       left: 0,
       top: 0,
@@ -285,21 +287,21 @@ $('.startGame, .play').click(function loadGame() {
       }, updateSpeed);
     }, 1000);
   }
-});
+}
 
-$('.play-game').click(function() {
+$('.play-game').click(function () {
 
   $('.startsida').show();
   $('.game').hide();
   $('.highscore').hide();
 });
 
-$('.highScoreButton').click(function(){
+$('.highScoreButton').click(function () {
   $('.startsida').hide();
   $('.highscore').show();
 });
 
-$('.back').click(function(){
+$('.back').click(function () {
   $('.startsida').show();
   $('.highscore').hide();
 });
