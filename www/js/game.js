@@ -1,6 +1,6 @@
-$('.startGame').click(function loadGame() {
+$('.startGame, .play').click(function loadGame() {
 
-  $('.startsida').hide();
+  $('.startsida, .highscore').hide();
   $('.game').show();
 
   // Main variables
@@ -293,4 +293,15 @@ $('.play-game').click(function() {
 
   $('.startsida').show();
   $('.game').hide();
+  $('.highscore').hide();
+});
+
+$('.highScoreButton').click(function(){
+  $('.startsida').hide();
+  $('.highscore').show();
+});
+
+$('.back').click(function(){
+  $('.startsida').show();
+  $('.highscore').hide();
 });
