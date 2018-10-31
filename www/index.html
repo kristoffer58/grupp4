@@ -41,7 +41,7 @@
 				<div class="row mr-2 ml-2">
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout1.PNG" alt="Card image cap">
+							<img class="card-img-top" src="/images/breakout1.PNG" alt="Card image cap" onclick="openModal();currentSlide(1)">
 							<div class="card-body">
 								<h5 class="card-title">Sparkanoid</h5>
 								<a href="http://www.gamesxl.com/arcade/sparkanoid" target="_blank" class="btn btn-primary"></a>
@@ -50,7 +50,7 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout2.PNG" alt="Card image cap">
+							<img class="card-img-top" src="/images/breakout2.PNG" alt="Card image cap" onclick="openModal();currentSlide(2)">
 							<div class="card-body">
 								<h5 class="card-title">Atari Breakout</h5>
 								<a href="https://www.crazygames.com/game/atari-breakout" target="_blank" class="btn btn-primary"></a>
@@ -59,7 +59,7 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout3.PNG" alt="Card image cap">
+							<img class="card-img-top" src="/images/breakout3.PNG" alt="Card image cap" onclick="openModal();currentSlide(3)">
 							<div class="card-body">
 								<h5 class="card-title">Breakout 5</h5>
 								<a href="http://o.www.spela.se/spel_/breakout_5" target="_blank" class="btn btn-primary"></a>
@@ -68,7 +68,7 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout4.PNG" alt="Card image cap">
+							<img class="card-img-top" src="/images/breakout4.PNG" alt="Card image cap" onclick="openModal();currentSlide(4)">
 							<div class="card-body">
 								<h5 class="card-title">Breakout Wars</h5>
 								<a href="https://www.y8.com/games/breakout_wars" target="_blank" class="btn btn-primary"></a>
@@ -77,7 +77,7 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout5.PNG" alt="Card image cap">
+							<img class="card-img-top" src="/images/breakout5.PNG" alt="Card image cap" onclick="openModal();currentSlide(5)">
 							<div class="card-body">
 								<h5 class="card-title">Yet Another Breakout</h5>
 								<a href="https://www.y8.com/games/yet_another_breakout" target="_blank" class="btn btn-primary"></a>
@@ -86,12 +86,43 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout6.PNG" alt="Card image cap">
+							<img class="card-img-top" src="/images/breakout6.PNG" alt="Card image cap" onclick="openModal();currentSlide(6)">
 							<div class="card-body">
 								<h5 class="card-title">Master Breakout</h5>
 								<a href="https://www.y8.com/games/master_breakout" target="_blank" class="btn btn-primary"></a>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<div class="mySlides">
+						<div class="numbertext">1 / 6</div>
+						<img src="/images/breakout1.PNG" alt="Card image cap">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">2 / 6</div>
+						<img src="/images/breakout2.PNG" alt="Card image cap">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">3 / 6</div>
+						<img src="/images/breakout3.PNG" alt="Card image cap">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">4 / 6</div>
+						<img src="/images/breakout4.PNG" alt="Card image cap">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">5 / 6</div>
+						<img src="/images/breakout5.PNG" alt="Card image cap">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">6 / 6</div>
+						<img src="/images/breakout6.PNG" alt="Card image cap">
 					</div>
 				</div>
 			</div>
@@ -106,91 +137,94 @@
 							<article></article>
 						</section>
 					</div>
-					<div class="right col-lg-10">
-						<div class="flyer-pic">
-							<img class="flyer-pic img-fluid" src="/images/arcadeFlyer.jpg">
-						</div>
-						<div>
-							<h2>STEVE JOBS + STEVE WOZNIAK = BREAKOUT!</h2>
-							<div class="carousel">
-								<div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-									<ol class="carousel-indicators">
-										<li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-										<li data-target="#carouselIndicators" data-slide-to="1"></li>
-										<li data-target="#carouselIndicators" data-slide-to="2"></li>
-										<li data-target="#carouselIndicators" data-slide-to="3"></li>
-										<li data-target="#carouselIndicators" data-slide-to="4"></li>
-										<li data-target="#carouselIndicators" data-slide-to="5"></li>
-										<li data-target="#carouselIndicators" data-slide-to="6"></li>
-										<li data-target="#carouselIndicators" data-slide-to="7"></li>
-									</ol>
-									<div class="carousel-inner">
-										<div class="carousel-item active">
-											<img class="d-block w-100" src="/images/carouselPic1.jpg" alt="First slide">
-											<div class="carousel-caption d-none d-md-block">
-												<p>Breakout Game</p>
+
+					<div class="col-lg-10">
+						<section class="image-background">
+							<div class="flyer-pic">
+								<img class="flyer-pic img-fluid" src="/images/arcadeFlyer.jpg">
+							</div>
+							<div>
+								<h2>STEVE JOBS + STEVE WOZNIAK = BREAKOUT!</h2>
+								<div class="carousel">
+									<div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+										<ol class="carousel-indicators">
+											<li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+											<li data-target="#carouselIndicators" data-slide-to="1"></li>
+											<li data-target="#carouselIndicators" data-slide-to="2"></li>
+											<li data-target="#carouselIndicators" data-slide-to="3"></li>
+											<li data-target="#carouselIndicators" data-slide-to="4"></li>
+											<li data-target="#carouselIndicators" data-slide-to="5"></li>
+											<li data-target="#carouselIndicators" data-slide-to="6"></li>
+											<li data-target="#carouselIndicators" data-slide-to="7"></li>
+										</ol>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<img class="d-block w-100" src="/images/carouselPic1.jpg" alt="First slide">
+												<div class="carousel-caption d-none d-md-block">
+													<p>Breakout Game</p>
+												</div>
 											</div>
-										</div>
-										<div class="carousel-item">
-											<img class="d-block w-100" src="/images/carouselPic2.jpg" alt="Second slide">
-											<div class="carousel-caption d-none d-md-block">
-												<p>Pong</p>
+											<div class="carousel-item">
+												<img class="d-block w-100" src="/images/carouselPic2.jpg" alt="Second slide">
+												<div class="carousel-caption d-none d-md-block">
+													<p>Pong</p>
+												</div>
 											</div>
-										</div>
-										<div class="carousel-item">
-											<img class="d-block w-100" src="/images/carouselPic3.jpg" alt="Third slide">
-											<div class="carousel-caption d-none d-md-block">
-												<p>Breakout Game</p>
+											<div class="carousel-item">
+												<img class="d-block w-100" src="/images/carouselPic3.jpg" alt="Third slide">
+												<div class="carousel-caption d-none d-md-block">
+													<p>Breakout Game</p>
+												</div>
 											</div>
-										</div>
-										<div class="carousel-item">
-											<img class="d-block w-100" src="/images/carouselPic4.jpg" alt="Forth slide">
-											<div class="carousel-caption d-none d-md-block">
-												<p>Super Breakout</p>
+											<div class="carousel-item">
+												<img class="d-block w-100" src="/images/carouselPic4.jpg" alt="Forth slide">
+												<div class="carousel-caption d-none d-md-block">
+													<p>Super Breakout</p>
+												</div>
 											</div>
-										</div>
-										<div class="carousel-item">
-											<img class="d-block w-100" src="/images/breakout1.png" alt="Fifth slide">
-											<div class="carousel-caption d-none d-md-block">
-												<p>Breakout Game</p>
+											<div class="carousel-item">
+												<img class="d-block w-100" src="/images/breakout1.png" alt="Fifth slide">
+												<div class="carousel-caption d-none d-md-block">
+													<p>Breakout Game</p>
+												</div>
 											</div>
-										</div>
-										<div class="carousel-item">
-											<img class="d-block w-100" src="/images/breakout2.png" alt="sixth slide">
-											<div class="carousel-caption d-none d-md-block">
-												<p>Breakout Game</p>
+											<div class="carousel-item">
+												<img class="d-block w-100" src="/images/breakout2.png" alt="sixth slide">
+												<div class="carousel-caption d-none d-md-block">
+													<p>Breakout Game</p>
+												</div>
 											</div>
-										</div>
-										<div class="carousel-item">
-											<img class="d-block w-100" src="/images/breakout4.png" alt="Seventh slide">
-											<div class="carousel-caption d-none d-md-block">
-												<p>Breakout Game</p>
+											<div class="carousel-item">
+												<img class="d-block w-100" src="/images/breakout4.png" alt="Seventh slide">
+												<div class="carousel-caption d-none d-md-block">
+													<p>Breakout Game</p>
+												</div>
 											</div>
-										</div>
-										<div class="carousel-item">
-											<img class="d-block w-100" src="/images/breakout5.png" alt="Eighth slide">
-											<div class="carousel-caption d-none d-md-block">
-												<p>Breakout Game</p>
+											<div class="carousel-item">
+												<img class="d-block w-100" src="/images/breakout5.png" alt="Eighth slide">
+												<div class="carousel-caption d-none d-md-block">
+													<p>Breakout Game</p>
+												</div>
 											</div>
 										</div>
 									</div>
+									<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
 								</div>
-								<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-								<a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								</a>
+								<div class="flyer-pic2 pt-5 d-xl-none">
+									<img class="flyer-pic2 img-fluid" src="/images/breakout3.png">
+								</div>
 							</div>
-							<div class="flyer-pic2 pt-5 d-xl-none">
-								<img class="flyer-pic2 img-fluid" src="/images/breakout3.png">
-							</div>
-						</div>
 					</div>
-				</div>
-			</div>
+		</section>
+		</div>
+		</div>
 		</section>
 
 		<section class="play-game mt-4">
@@ -230,32 +264,33 @@
 				<div class="main-text"></div>
 			</div>
 
-            <div class='startsida'>
+			<div class='startsida'>
 				<h1>Breakout</h1>
 				<p class='startGame'>Start</p>
 				<p class='highScoreButton'>High Score</p>
 				<p class="Instructions" data-toggle="modal" data-target="#instructionsModalCenter">Instructions</p>
-				<div class="modal fade" id="instructionsModalCenter" tabindex="-1" role="dialog" aria-labelledby="instructionsModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-						  <div class="modal-content">
+				<div class="modal fade" id="instructionsModalCenter" tabindex="-1" role="dialog" aria-labelledby="instructionsModalCenterTitle"
+				 aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+						<div class="modal-content">
 							<div class="modal-header d-block">
-							  <h5 class="modal-title text-center" id="instructionsModalLongTitle">Instructions</h5>
-							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							  </button>
+								<h5 class="modal-title text-center" id="instructionsModalLongTitle">Instructions</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
 							</div>
 							<div class="modal-body">
 								<!-- get instructions.json -->
 							</div>
 							<div class="modal-footer d-block">
-							  <button type="button" class="btn text-center btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" class="btn text-center btn-secondary" data-dismiss="modal">Close</button>
 							</div>
-						  </div>
 						</div>
-					  </div>
+					</div>
+				</div>
 			</div>
 
-            <div class='highscore'>
+			<div class='highscore'>
 				<h1>High Score</h1>
 				<div class=lista></div>
 				<p class="back">Tillbaka</p>
@@ -304,8 +339,9 @@
 	<script src="/js/game.js"></script>
 	<script src="/js/modal.js"></script>
 	<script src="/js/history.js"></script>
+	<script src="/js/cards-lightbox.js"></script>
 	<script src="/js/instructions.js"></script>
-  <script src="/js/main.js"></script>
+	<script src="/js/main.js"></script>
 </body>
 
 </html>
