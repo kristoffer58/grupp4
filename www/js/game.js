@@ -143,10 +143,8 @@ function loadGame() {
   }
 
   // Does not work for rectangles, only squares
-  // Changes the ball's direction after collision with bricks
   function getHorizontalOrVerticalDirection(objA, objB) {
-    
-    //return 'vertical'; // Always return 'vertical' for non-square bricks
+    return 'vertical'; // Always return 'vertical' for non-square bricks
     // Todo: fix code for rectangle bricks
     const aY = objA.top + objA.height / 2;
     const aX = objA.left + objA.width / 2;
@@ -250,7 +248,7 @@ function loadGame() {
       bricks.push(brick);
       $('.game').append(brick.$);
 
-      prevLeft += brickCSS.width * 2; //distance in bricks between bricks: 1 = 0 distance, 2 = 1 brick's distance
+      prevLeft += brickCSS.width * 2;
     }
   }
 
