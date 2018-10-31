@@ -100,13 +100,13 @@
 		<section class="Historia">
 			<div class="container mt-5">
 				<div class="row ml-4 mr-4">
-					<div class="col-lg-14 p-0">
+					<div class="col-lg-14">
 						<section class="historic">
 							<h1></h1>
 							<article></article>
 						</section>
 					</div>
-					<div class="col-lg-10 p-0">
+					<div class="right col-lg-10">
 						<div class="flyer-pic">
 							<img class="flyer-pic img-fluid" src="/images/arcadeFlyer.jpg">
 						</div>
@@ -127,27 +127,51 @@
 									<div class="carousel-inner">
 										<div class="carousel-item active">
 											<img class="d-block w-100" src="/images/carouselPic1.jpg" alt="First slide">
+											<div class="carousel-caption d-none d-md-block">
+												<p>Breakout Game</p>
+											</div>
 										</div>
 										<div class="carousel-item">
 											<img class="d-block w-100" src="/images/carouselPic2.jpg" alt="Second slide">
+											<div class="carousel-caption d-none d-md-block">
+												<p>Pong</p>
+											</div>
 										</div>
 										<div class="carousel-item">
 											<img class="d-block w-100" src="/images/carouselPic3.jpg" alt="Third slide">
+											<div class="carousel-caption d-none d-md-block">
+												<p>Breakout Game</p>
+											</div>
 										</div>
 										<div class="carousel-item">
 											<img class="d-block w-100" src="/images/carouselPic4.jpg" alt="Forth slide">
+											<div class="carousel-caption d-none d-md-block">
+												<p>Super Breakout</p>
+											</div>
 										</div>
 										<div class="carousel-item">
 											<img class="d-block w-100" src="/images/breakout1.png" alt="Fifth slide">
+											<div class="carousel-caption d-none d-md-block">
+												<p>Breakout Game</p>
+											</div>
 										</div>
 										<div class="carousel-item">
 											<img class="d-block w-100" src="/images/breakout2.png" alt="sixth slide">
+											<div class="carousel-caption d-none d-md-block">
+												<p>Breakout Game</p>
+											</div>
 										</div>
 										<div class="carousel-item">
 											<img class="d-block w-100" src="/images/breakout4.png" alt="Seventh slide">
+											<div class="carousel-caption d-none d-md-block">
+												<p>Breakout Game</p>
+											</div>
 										</div>
 										<div class="carousel-item">
 											<img class="d-block w-100" src="/images/breakout5.png" alt="Eighth slide">
+											<div class="carousel-caption d-none d-md-block">
+												<p>Breakout Game</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -170,6 +194,48 @@
 		</section>
 
 		<section class="play-game mt-4">
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+				High Score
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+			 aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalCenterTitle">High Score List</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form id="submit-highscore">
+								Name: <input type="text" name="fname">
+								<button type="button">Submit</button>
+							</form>
+							<div class="row">
+								<ul class="list-header">
+									<li class="list-col">name</li>
+									<li class="list-col">high score</li>
+									<li class="list-col">rank</li>
+								</ul>
+							</div>
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="modal-buttons">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Play again</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="game">
 				<div class="score">SCORE: <span>00000</span></div>
 				<div class="lives">LIVES: <span>3</span></div>
@@ -184,6 +250,7 @@
 				<p class="highScore">High Score</p>
 				<p class="instructions">Instructions</p>
 			</div>
+
 		</section>
 	</main>
 	<footer class="container-fluid bg-retro mt-4 text-light p-4">
@@ -198,14 +265,14 @@
 				</div>
 			</div>
 			<div class="col-md-8 text-md-center">
-				<div class="d-inline-block text-left">
+				<div class="tel d-inline-block text-left">
 					<h5 class="mt-3 mt-md-0 phone"></h5>
 					<p class="mb-0"><span class="custom"></span><a href="tel:046-456-54-76"> 046-456 54 76</a></p>
 					<p class="mb-0"><span class="reservation"></span> <a href="tel:046-595-34-54"> 046-595 34 54</a></p>
 				</div>
 			</div>
 			<div class="col-md-8 text-md-center">
-				<div class="d-inline-block text-left">
+				<div class="email d-inline-block text-left">
 					<h5 class="mt-3 mt-md-0 mail"></h5>
 					<p class="mb-0"><a href="mailto:info@breakout.se">info@breakout.se</a><br>
 						<a href="mailto:	nyheter@breakout.se">nyheter@breakout.se></a></p>
@@ -218,7 +285,10 @@
 	 crossorigin="anonymous"></script>
 	<script src="/js/tryMeButton.js"></script>
 	<script src="/js/nav.js"></script>
+
 	<script src="/js/game.js"></script>
+	<script src="/js/highScore.js"></script>
+	<script src="/js/modal.js"></script>
 	<script src="/js/history.js"></script>
 	<script src="/js/main.js"></script>
 </body>
