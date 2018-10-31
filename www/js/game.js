@@ -285,7 +285,7 @@ $('.startGame').click(function loadGame() {
       }, updateSpeed);
     }, 1000);
   }
-}
+});
 
 $('.play-game').click(function() {
 
