@@ -33,6 +33,7 @@ function frontendRouter(path) {
     '/game': () => {
       $('body main > *').hide(); $('.play-game').show();
       changeActiveLink('play-game');
+      loadGame();
     },
     '/404': () => {
       $('body main > *').hide(); $('.the404').show();
