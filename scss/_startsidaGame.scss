@@ -6,15 +6,54 @@
     margin: auto;
     border: 5px groove #6c4b96;
     display: block;
+    text-align: center;
+    position: relative;
 
     h1{
-        font-size: 100px;
-        margin-top: 40px;
+        font-size: 8vw;
+        margin-top: 5%;
     }
 
-    p{
-        margin-top: 30px;
-        font-size: 30px;
+    .startGame{
+        position: absolute;
+        width: 250px;
+        left:50%;
+        margin-left:-125px;
+        top:45%;
+        vertical-align:middle;
+        font-size: 4vh;
+        color:#007bff;
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .highScoreButton{
+        position: absolute;
+        width: 250px;
+        top: 57%;
+        left:50%;
+        margin-left:-125px;
+        text-align: center;
+        font-size: 4vh;
+        color:#007bff;
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .Instructions{
+        position: absolute;
+        width: 250px;
+        top: 69%;
+        left: 50%;
+        margin-left:-125px;
+        text-align: center;
+        font-size: 4vh;
         color:#007bff;
 
         &:hover{

@@ -3,7 +3,7 @@ let score;
 
 function loadGame() {
 
-  $('.startsida').hide();
+  $('.startsida, .highscore').hide();
   $('.game').show();
 
   // Main variables
@@ -197,7 +197,7 @@ function loadGame() {
     });
   }
 
-  function loadGameBorders(){
+  function loadGameBorders() {
     return {
       left: 0,
       top: 0,
@@ -288,3 +288,20 @@ function loadGame() {
     }, 1000);
   }
 }
+
+$('.play-game').click(function () {
+
+  $('.startsida').show();
+  $('.game').hide();
+  $('.highscore').hide();
+});
+
+$('.highScoreButton').click(function () {
+  $('.startsida').hide();
+  $('.highscore').show();
+});
+
+$('.back').click(function () {
+  $('.startsida').show();
+  $('.highscore').hide();
+});
