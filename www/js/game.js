@@ -1,6 +1,4 @@
-$('.startGame').click(loadGame);
-
-function loadGame() {
+$('.startGame').click(function loadGame() {
 
   $('.startsida').hide();
   $('.game').show();
