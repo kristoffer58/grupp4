@@ -1,4 +1,5 @@
 $('.startGame').click(loadGame);
+let score;
 
 function loadGame() {
 
@@ -7,7 +8,6 @@ function loadGame() {
 
   // Main variables
   let lives;
-  let score;
   let paused;
   const bricks = [];
   const keysPressed = {};
