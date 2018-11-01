@@ -1,13 +1,11 @@
-$('.startGame').click(loadGame);
-let score;
-
-function loadGame() {
+$('.startGame, .play').click(function loadGame() {
 
   $('.startsida, .highscore').hide();
   $('.game').show();
 
   // Main variables
   let lives;
+  let score;
   let paused;
   const bricks = [];
   const keysPressed = {};
@@ -29,8 +27,8 @@ function loadGame() {
     score = 0;
     paused = false;
 
-    resetBall();
     resetPaddle();
+    resetBall();
     spawnBricks();
 
     updateInterface();
@@ -77,6 +75,7 @@ function loadGame() {
     paused = true;
     updateInterface();
     resetBall();
+    resetPaddle();
     liveLost.play();
   }
 
@@ -89,8 +88,8 @@ function loadGame() {
       ball.direction.x *= -1;
     }
 
-    if (ball.top < gameBorders.top) {
-      ball.top = 0;
+    if (ball.top < gameBorders.top +30) {
+      ball.top = 30;
       ball.direction.y *= -1;
     } else if (ball.top + ball.height > gameBorders.height) {
       loseLife();
@@ -143,7 +142,9 @@ function loadGame() {
   }
 
   // Does not work for rectangles, only squares
+  // Changes the ball's direction after collision with bricks
   function getHorizontalOrVerticalDirection(objA, objB) {
+    
     return 'vertical'; // Always return 'vertical' for non-square bricks
     // Todo: fix code for rectangle bricks
     const aY = objA.top + objA.height / 2;
@@ -197,7 +198,7 @@ function loadGame() {
     });
   }
 
-  function loadGameBorders() {
+  function loadGameBorders(){
     return {
       left: 0,
       top: 0,
@@ -218,11 +219,12 @@ function loadGame() {
     paddle.$.css('left', (paddle.left = gameBorders.width / 2 - paddle.width / 2));
   }
 
+  //ball position 
   function resetBall() {
     ball.$ = $('.ball');
     ball.speed = initialBallSpeed;
-    ball.$.css('left', (ball.left = 0));
-    ball.$.css('top', (ball.top = 0));
+    ball.$.css('left', (ball.left = gameBorders.width / 2 - 15));
+    ball.$.css('top', (ball.top = paddle.top - 30));
     ball.direction = { x: 1, y: 1 };
 
     ball.width = ball.$.width();
@@ -248,7 +250,7 @@ function loadGame() {
       bricks.push(brick);
       $('.game').append(brick.$);
 
-      prevLeft += brickCSS.width * 2;
+      prevLeft += brickCSS.width * 1; //distance in bricks between bricks: 1 = 0 distance, 2 = 1 brick's distance
     }
   }
 
@@ -287,21 +289,21 @@ function loadGame() {
       }, updateSpeed);
     }, 1000);
   }
-}
+});
 
-$('.play-game').click(function () {
+$('.play-game').click(function() {
 
   $('.startsida').show();
   $('.game').hide();
   $('.highscore').hide();
 });
 
-$('.highScoreButton').click(function () {
+$('.highScoreButton').click(function(){
   $('.startsida').hide();
   $('.highscore').show();
 });
 
-$('.back').click(function () {
+$('.back').click(function(){
   $('.startsida').show();
   $('.highscore').hide();
 });
