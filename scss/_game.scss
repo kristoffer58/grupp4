@@ -1,8 +1,3 @@
-.gameHud {
-  border-bottom: 2px groove rgb(108, 75, 150);
-  height: 30px;
-}
-
 .game {
   position: relative;
   background-color: #000;
@@ -12,7 +7,7 @@
   margin: auto;
   border: 5px groove rgb(108, 75, 150);
   display: none;
-
+   
   .score {
     position: absolute;
     top: 5px;
@@ -34,8 +29,8 @@
   }
    
   .paddle {
-    width: 25vh;
-    height: 3vh;
+    width: 200px;
+    height: 30px;
     background: linear-gradient(rgb(0, 195, 255), rgb(1, 59, 77));
     position: absolute;
     z-index: 1;
@@ -51,7 +46,6 @@
     background-color: #777;
     position: absolute;
     z-index: 1;
-    border: 5px groove rgb(179, 155, 209);
   }
    
   .ball {
