@@ -78,6 +78,7 @@ function loadGame() {
     updateInterface();
     resetBall();
     liveLost.play();
+    
   }
 
   function collisionDetectBallAndGame() {
@@ -155,11 +156,13 @@ function loadGame() {
   }
 
   function updateInterface() {
+    sendNewHigscoreToServer(score) // this one is in newHighscore.js 
     $('.score span').text((score + '').padStart(5, '0'));
     $('.lives span').text(lives);
     $('.main-text').hide();
     if (lives < 1) {
       $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
+      
     } else if (!bricks.length) {
       $('.main-text').text('CONGRATULATIONS - YOU WON');
     } else if (paused) {
