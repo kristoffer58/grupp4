@@ -1,9 +1,11 @@
 
+
+
 function sendNewHigscoreToServer(score) {
  console.log(score);
+
     $.getJSON('/json/highscore.json', checkIfNewHighscore);
     
-
 function checkIfNewHighscore(jsonObj) {
     
     if(score>jsonObj[9].score){
