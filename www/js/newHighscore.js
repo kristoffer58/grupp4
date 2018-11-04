@@ -1,12 +1,14 @@
 
 function sendNewHigscoreToServer(score) {
 
-    $.getJSON('www\json\highscore.json', checkIfNewHighscore());
+    $.getJSON('\json\highscore.json', checkIfNewHighscore());
     
 
 function checkIfNewHighscore(jsonObj) {
     let lowestScor = 0;
     console.log(score);
+
+    console.log(jsonObj);
 
 
 
