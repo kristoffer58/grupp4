@@ -20,10 +20,8 @@ function checkIfNewHighscore(jsonObj) {
        $.post("/add-score",{name,score},null);
 
     }
-
     console.log(jsonObj);
     console.log(jsonObj[5].userScore);
-
     }
     }
     
