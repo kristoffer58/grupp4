@@ -36,7 +36,7 @@ app.post('/add-score', (req, res) => {
 // add a route that the browsers/clients can communicate through
 
   highscores.push(req.body); // add the new score
-  highscores.sort(function(a,b){return b-a
+  highscores.sort(function(a,b){return b.score-a.score
  // Google MDN js array sort and write the sort-function
   });
   highscores = highscores.slice(0,10); // only keep the top 10 in the array

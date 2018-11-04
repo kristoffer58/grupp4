@@ -2,16 +2,16 @@
 
 
 function sendNewHigscoreToServer(userScore) {
- console.log(userSore);
+ console.log(userScore);
 
     $.getJSON('/json/highscore.json', checkIfNewHighscore);
     
 function checkIfNewHighscore(jsonObj) {
     
-    if(score>jsonObj[9].userScore){
+    if(userScore>jsonObj[9].score){
         
-        name =  prompt("New highscore whats your name?")
-        score = userScore;
+       let name =  prompt("New highscore whats your name?")
+       let score = userScore;
         $.post("/add-score",{name,score},null);
             
     }
