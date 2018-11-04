@@ -1,27 +1,24 @@
 
 
 
-function sendNewHigscoreToServer(score) {
- console.log(score);
+function sendNewHigscoreToServer(userScore) {
+ console.log(userSore);
 
     $.getJSON('/json/highscore.json', checkIfNewHighscore);
     
 function checkIfNewHighscore(jsonObj) {
     
-    if(score>jsonObj[9].score){
+    if(score>jsonObj[9].userScore){
         
-        prompt("New highscore whats your name?").catch(error => {
-            // Auto-play was prevented
-            // Show paused UI.
-          });
-
+        name =  prompt("New highscore whats your name?")
+        score = userScore;
         $.post("/add-score",{name,score},null);
             
     }
 
    
     console.log(jsonObj);
-    console.log(jsonObj[5].score);
+    console.log(jsonObj[5].userScore);
 
 
 

@@ -31,9 +31,10 @@ let fs= require('fs'); // import the fileSystem library
 let bodyParser = require('body-parser'); // import body-parser (to read sent data from clients)
 app.use(bodyParser.json()); // use body-parser
 app.use(bodyParser.urlencoded({ extended: false })); // configure body-parser
-let highscores = require('./www/json/highscore.json'); // load the json file - store it in a new variable
-// add a route that the browsers/clients can communicate through
 app.post('/add-score', (req, res) => {
+  let highscores = require('./www/json/highscore.json'); // load the json file - store it in a new variable
+// add a route that the browsers/clients can communicate through
+
   highscores.push(req.body); // add the new score
   highscores.sort(function(a,b){return b-a
  // Google MDN js array sort and write the sort-function
