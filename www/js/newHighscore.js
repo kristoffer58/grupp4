@@ -9,19 +9,11 @@ function sendNewHigscoreToServer(score) {
 function checkIfNewHighscore(jsonObj) {
     
     if(score>jsonObj[9].score){
-        /*
-        if (play() !== undefined) {
-            playPromise.then(_ => {
-              // Automatic playback started!
-              // Show playing UI.
-              // We can now safely pause video...
-              pause();
-            })
-            .catch(error => {
-              // Auto-play was prevented
-              // Show paused UI.
-            });
-        */prompt("New highscore whats your name?");
+        
+        prompt("New highscore whats your name?").catch(error => {
+            // Auto-play was prevented
+            // Show paused UI.
+          });
 
         $.post("/add-score",{name,score},null);
             

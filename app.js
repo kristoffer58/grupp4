@@ -35,7 +35,7 @@ let highscores = require('./www/json/highscore.json'); // load the json file - s
 // add a route that the browsers/clients can communicate through
 app.post('/add-score', (req, res) => {
   highscores.push(req.body); // add the new score
-  highscores.sort(function(a,b){
+  highscores.sort(function(a,b){return b-a
  // Google MDN js array sort and write the sort-function
   });
   highscores = highscores.slice(0,10); // only keep the top 10 in the array
