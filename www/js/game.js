@@ -1,8 +1,16 @@
-$('.startGame, .play').click(function loadGame() {
+$('.startGame, .play').click(loadGame);
 
+let hitSound = new Audio('/sounds/hit.wav');
+let liveLost = new Audio('/sounds/liveLost.wav');
+let bgsound = new Audio('/sounds/bg_music.mp3');
+
+function showGame() {
   $('.startsida, .highscore').hide();
   $('.game').show();
+}
 
+function loadGame() {
+  showGame();
   // Main variables
   let lives;
   let score;
@@ -14,11 +22,11 @@ $('.startGame, .play').click(function loadGame() {
   const paddle = {};
   const ball = {};
   let gameBorders = loadGameBorders();
-  let hitSound = new Audio('/sounds/hit.wav');
-  let liveLost = new Audio('/sounds/liveLost.wav');
-  let bgsound = new Audio('/sounds/bg_music.mp3');
   bgsound.loop = true;
   bgsound.play();
+  $('.game .brick').remove();
+  $("#newHigscoreForm").remove();
+
 
   // Setup key listeners before starting the first game
   setupKeyListeners();
@@ -200,7 +208,7 @@ $('.startGame, .play').click(function loadGame() {
     } else {
       $('.main-text').text('');
     }
-    if (!bricks.length) {
+    if (bricks.length<1) {
       //   $('.main-text').text('CONGRATULATIONS - YOU WON');
          sendNewHigscoreToServer(score) // this one is in newHighscore.js 
        
@@ -351,7 +359,7 @@ $('.startGame, .play').click(function loadGame() {
       }, updateSpeed);
     }, 1000);
   }
-});
+}
 
 $('.play-game').click(function() {
 

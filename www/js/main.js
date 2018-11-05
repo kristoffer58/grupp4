@@ -21,6 +21,8 @@ frontendRouter(location.pathname);
 
 // The router (do whatever you want here)
 function frontendRouter(path) {
+  clearInterval(window.gameInterval);
+  bgsound.load();
   let routes = {
     '/': () => {
       $('body main > *').hide(); $('.Start').show();
