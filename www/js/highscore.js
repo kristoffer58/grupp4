@@ -3,6 +3,7 @@
 $('.highScoreButton').click(showResults);
 
   function showResults() {
+    resetHighscoreList()
   $.getJSON('/json/highscore.json', show);
 
 

@@ -16,8 +16,6 @@ function write(historyTrans) {
 }
 
 $('.flag').click(function () {
-  $('#engelska').toggle();
-  $('#sverige').toggle();
   languageIsSwedish = !languageIsSwedish;
   write(jsonData);
 });

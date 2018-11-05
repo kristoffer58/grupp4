@@ -1,8 +1,16 @@
-$('.startGame, .play').click(function loadGame() {
+$('.startGame, .play').click(loadGame);
 
+let hitSound = new Audio('/sounds/hit.wav');
+let liveLost = new Audio('/sounds/liveLost.wav');
+let bgsound = new Audio('/sounds/bg_music.mp3');
+
+function showGame() {
   $('.startsida, .highscore').hide();
   $('.game').show();
+}
 
+function loadGame() {
+  showGame();
   // Main variables
   let lives;
   let score;
@@ -14,8 +22,11 @@ $('.startGame, .play').click(function loadGame() {
   const paddle = {};
   const ball = {};
   let gameBorders = loadGameBorders();
-  let hitSound = new Audio('/sounds/hit.wav')
-  let liveLost = new Audio('/sounds/liveLost.wav')
+  bgsound.loop = true;
+  bgsound.play();
+  $('.game .brick').remove();
+  $("#newHigscoreForm").remove();
+
 
   // Setup key listeners before starting the first game
   setupKeyListeners();
@@ -25,13 +36,14 @@ $('.startGame, .play').click(function loadGame() {
   function startNewGame() {
     lives = 3;
     score = 0;
-    paused = false;
+    //paused = false;
 
     resetPaddle();
     resetBall();
     spawnBricks();
 
     updateInterface();
+    paused = true;  // the game starts when ENTER is pressed
     startInterval();
   }
 
@@ -41,6 +53,12 @@ $('.startGame, .play').click(function loadGame() {
     movePaddle(deltaTime);
     moveBall(deltaTime);
   }
+
+   /*function updateGame(deltaTime) {
+    if (paused) { movePaddle(deltaTime); return; }  // able to move the paddle when paused
+    moveBall(deltaTime);
+  }
+*/
 
   function movePaddle(deltaTime) {
     const direction = calculatePaddleDirection();
@@ -190,7 +208,7 @@ $('.startGame, .play').click(function loadGame() {
     } else {
       $('.main-text').text('');
     }
-    if (!bricks.length) {
+    if (bricks.length<1) {
       //   $('.main-text').text('CONGRATULATIONS - YOU WON');
          sendNewHigscoreToServer(score) // this one is in newHighscore.js 
        
@@ -256,6 +274,10 @@ $('.startGame, .play').click(function loadGame() {
 
     ball.width = ball.$.width();
     ball.height = ball.$.height();
+
+    ball.$.css('left', (ball.left = gameBorders.width / 2 - ball.width /2));
+    ball.$.css('top', (ball.top = paddle.top - ball.height));
+    ball.direction = { x: 1, y: -1 };
   }
 
   function spawnBricks() {
@@ -283,22 +305,22 @@ $('.startGame, .play').click(function loadGame() {
     prevLeft = brickCSS.left;
 
     for (let color of colors) {
-      const brick = createBrick(prevLeft + 35, brickCSS.top + 25, brickCSS.width, brickCSS.height, color);
+      const brick = createBrick(prevLeft, brickCSS.top + brickCSS.height, brickCSS.width, brickCSS.height, color);
 
       bricks.push(brick);
       $('.game').append(brick.$);
 
-      prevLeft += brickCSS.width * 2;
+      prevLeft += brickCSS.width * 1;
     }
     prevLeft = brickCSS.left;
 
     for (let color of colors) {
-      const brick = createBrick(prevLeft - 20,  brickCSS.top + 60, brickCSS.width, brickCSS.height, color);
+      const brick = createBrick(prevLeft,  brickCSS.top + brickCSS.height + brickCSS.height, brickCSS.width, brickCSS.height, color);
 
       bricks.push(brick);
       $('.game').append(brick.$);
 
-      prevLeft += brickCSS.width * 2;
+      prevLeft += brickCSS.width * 1;
     }
   }
 
@@ -337,7 +359,7 @@ $('.startGame, .play').click(function loadGame() {
       }, updateSpeed);
     }, 1000);
   }
-});
+}
 
 $('.play-game').click(function() {
 
@@ -350,7 +372,7 @@ $('.play-game').click(function() {
 $('.highScoreButton').click(function(){
   $('.startsida').hide();
   $('.highscore').show();
-  resetHighscoreList();
+  
   
 });
 
