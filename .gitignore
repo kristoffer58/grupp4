@@ -64,6 +64,6 @@ typings/
 
 www/css/
 
-.json
+www/json/*.json
 
 .DS_Store
