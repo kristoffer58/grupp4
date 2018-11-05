@@ -278,6 +278,27 @@ $('.startGame, .play').click(function loadGame() {
 
       prevLeft += brickCSS.width * 1; //distance in bricks between bricks: 1 = 0 distance, 2 = 1 brick's distance
     }
+   
+    prevLeft = brickCSS.left;
+
+    for (let color of colors) {
+      const brick = createBrick(prevLeft + 35, brickCSS.top + 25, brickCSS.width, brickCSS.height, color);
+
+      bricks.push(brick);
+      $('.game').append(brick.$);
+
+      prevLeft += brickCSS.width * 2;
+    }
+    prevLeft = brickCSS.left;
+
+    for (let color of colors) {
+      const brick = createBrick(prevLeft - 20,  brickCSS.top + 60, brickCSS.width, brickCSS.height, color);
+
+      bricks.push(brick);
+      $('.game').append(brick.$);
+
+      prevLeft += brickCSS.width * 2;
+    }
   }
 
   function createBrick(left, top, width, height, backgroundColor) {
