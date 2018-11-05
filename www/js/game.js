@@ -185,7 +185,7 @@ $('.startGame, .play').click(function loadGame() {
       $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
       sendNewHigscoreToServer(score) // this one is in newHighscore.js 
      } else if (paused) {
-      sendNewHigscoreToServer(score) // this one is in newHighscore.js 
+      
       
     } else {
       $('.main-text').text('');
