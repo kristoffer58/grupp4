@@ -1,6 +1,8 @@
 
 
-$('.highScoreButton').click(function showResults() {
+$('.highScoreButton').click(showResults);
+
+  function showResults() {
   $.getJSON('/json/highscore.json', show);
 
 
@@ -8,7 +10,7 @@ $('.highScoreButton').click(function showResults() {
     console.log(highScoreJson);
 
     let jasonData = highScoreJson;
-    let i =1;
+
 
     $(".highscore .lista").append('<div class="list col" id="col1">#rank</div>');
     $(".highscore .lista").append('<div class="list col" id="col2">name</div>');
@@ -18,10 +20,10 @@ $('.highScoreButton').click(function showResults() {
 
 
     for (i = 0; i < jasonData.length; i++) {
-      $("#col1").append('<div>' + i + '</div>');
+      $("#col1").append('<div>' + (i+1) + '</div>');
       $("#col2").append('<div>' + highScoreJson[i].name + '</div>');
       $("#col3").append('<div>' + highScoreJson[i].score + '</div>');
       
     }
   }
-})
+}
