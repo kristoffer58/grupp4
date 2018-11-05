@@ -8,7 +8,7 @@ function instructions(instructionTrans) {
 
   
   $('#instructionsModalCenter .modal-body').empty();
-  $('#instructionsModalCenter .modal-body').append('<h5>' + instructionTrans.title[lang] + '</h5>');
+  $('#instructionsModalCenter .modal-body').append('<h4>' + instructionTrans.title[lang] + '</h4>');
   for (let desc of instructionTrans.desc[lang]) {
     let pTag = '<p>' + desc + '</p>';
     $('#instructionsModalCenter .modal-body').append(pTag);
