@@ -21,9 +21,8 @@ function sendNewHigscoreToServer(userScore) {
             let form = $('<form id="newHigscoreForm">');
             $(form).append('Your name:<input type="text" id="highscoreName" name="highscoreName">');
             $(form).append('<input type="button" id="highscoreSubmit">');
-            $(form).append('</form>');
             $(".newHighscoreInput").append(form);
-
+            $(".newHighscoreInput").append('</form>');
 
 
             score = userScore;
@@ -41,6 +40,10 @@ function submit() {
     console.log(name);
     console.log((score));
     $("#newHigscoreForm").remove();
+    $('.game').hide();
+
+    $('.highscore').show();
+
 }
 
 $(document).on('click', '#highscoreSubmit', function name() {

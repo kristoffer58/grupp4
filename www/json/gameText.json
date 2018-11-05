@@ -1,0 +1,24 @@
+{
+    "gameText": {
+    "en": [
+        {
+            "highscore":"High Score",
+            "inst":"Instructions",
+            "back":"Back",
+            "score":"SCORE:",
+            "lives":"LIVES:",
+            "paused":"PAUSED - press ENTER to continue..."
+        }
+        ],
+      "sv": [
+        {
+            "highscore":"Ledarlista",
+            "inst":"Instruktioner",
+            "back":"Tillbaka",
+            "score":"POÄNG:",
+            "lives":"LIV:",
+            "paused":"PAUS - tryck ENTER för att fortsätta..."
+        }
+      ]
+    }
+  }
