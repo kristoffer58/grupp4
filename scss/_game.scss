@@ -1,9 +1,10 @@
 .game {
   position: relative;
-  background-color: #000;
-  color: white;
+  background-image: url("/images/bg-3.jpg") no-repeat center;
+  background-size: contain;
+  //color: white;
   height: 70vh;
-  width: 60%;
+  width: 60vw;
   margin: auto;
   border: 5px groove rgb(108, 75, 150);
   display: none;
@@ -11,6 +12,7 @@
   .gameHud {
     border-bottom: 4px groove rgb(108, 75, 150);
     height: 30px;
+    color: #FFF;
   }
 
   .score {
@@ -49,18 +51,44 @@
    
   .paddle {
     width: 15%;
-    height: 3%;
-    background: linear-gradient(rgb(0, 195, 255), rgb(1, 59, 77));
+    height: 3%;   
     position: absolute;
-    z-index: 1;
+    border-radius: 25px;
     bottom: 0;
-    border-radius: 20px;
-  }
+    border-style: outset;
+    border-width: 1px;
+    background: radial-gradient(
+      rgb(133, 108, 226) 20%,
+      rgb(36, 6, 85) 
+    );
+/*
+    &:after {
+      content: ‘’;
+      position: absolute;
+      width: 20px;
+      right: 0;
+      height: 100%;
+      background: rgb(222, 10, 10);
+      border-radius: 0 20% 20% 0;
+    } 
+    &:before {
+      content: ‘’;
+      position: absolute;
+      width: 20px;
+      left: 0;
+      height: 100%;
+      background: rgb(222, 10, 10);
+      border-radius: 20% 0 0 20%;
+   }
+   */
+}
+ 
+ 
    
   .brick {
-    width: 8vh;
+    width: 5vw;
     height: 2vh;
-    left: 25%;
+    left: 20%;
     top: 40%;
     background-color: #777;
     position: absolute;
