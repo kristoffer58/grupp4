@@ -1,53 +1,24 @@
-function instructions(instrTrans) {
-    // swedish instructions
-    let ul = $('<ul class="langSv"/>');
-    for (let explanation in instrTrans) {
-        let li = $('<li/>');
-        for (let langSv of instrTrans[explanation].sv) {
-            li.append('<p>' + langSv.desc + '</p>');
-        }
-        ul.append(li);
-        $('.modal-body').append(ul);
-
-
-        // english instructions
-        ul = $('<ul class="langEn"/>');
-        for (let explanation in instrTrans) {
-            let li = $('<li/>');
-            for (let langEn of instrTrans[explanation].en) {
-                li.append('<p>' + langEn.desc + '</p>');
-            }
-            ul.append(li);
-        }
-        $('.modal-body').append(ul);
-    }
-}
 $.getJSON('/json/instructions.json', instructions);
 
+let instructionData;
 
+function instructions(instructionTrans) {
+  instructionData = instructionTrans;
+  lang = languageIsSwedish ? 'sv' : 'en';
 
-
-/*
-function instruct(instructionTrans) {
-  jsonData = instructionTrans;
-  let lang = langIsSwedish ? 'sv' : 'en';
-
-  $('.modal-body h1').text(instructionTrans.title[lang]);
-
-  $('.modal-body').empty();
-  for (let text of instructionTrans.text[lang]) {
-    let pTag = '<p>' + text + '</p>';
-    $('.modal-body').append(pTag);
+  
+  $('#instructionsModalCenter .modal-body').empty();
+  $('#instructionsModalCenter .modal-body').append('<h5>' + instructionTrans.title[lang] + '</h5>');
+  for (let desc of instructionTrans.desc[lang]) {
+    let pTag = '<p>' + desc + '</p>';
+    $('#instructionsModalCenter .modal-body').append(pTag);
   }
 }
 
 $('.flag').click(function () {
-  $('#engelska').toggle();
-  $('#sverige').toggle();
-  langIsSwedish = !langIsSwedish;
-  instruct(jsonData);
+  instructions(instructionData);
 });
-*/
+
 
 
 
