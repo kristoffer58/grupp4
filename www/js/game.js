@@ -77,6 +77,7 @@ $('.startGame, .play').click(function loadGame() {
     resetBall();
     resetPaddle();
     liveLost.play();
+    
   }
 
   function collisionDetectBallAndGame() {
@@ -176,13 +177,16 @@ $('.startGame, .play').click(function loadGame() {
   }
 
   function updateInterface() {
+    
     $('.score span').text((score + '').padStart(5, '0'));
     $('.lives span').text(lives);
     $('.main-text').hide();
     if (lives < 1) {
       $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
+      sendNewHigscoreToServer(score) // this one is in newHighscore.js 
     } else if (!bricks.length) {
       $('.main-text').text('CONGRATULATIONS - YOU WON');
+      sendNewHigscoreToServer(score) // this one is in newHighscore.js 
     } else if (paused) {
       $('.main-text').text('PAUSED - press ENTER to continue...');
     } else {
