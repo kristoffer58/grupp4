@@ -1,6 +1,8 @@
 .game {
   position: relative;
-  background-image: url("/images/bg-3.jpg") no-repeat center;
+  background-image: url("/images/bg-3.jpg") ;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
   //color: white;
   height: 70vh;
