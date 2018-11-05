@@ -37,11 +37,17 @@ $('.startGame, .play').click(function loadGame() {
   }
 
   function updateGame(deltaTime) {
-    if (paused) { movePaddle(deltaTime); return; }  // able to move the paddle when paused
+    if (paused) { return; }
 
-    
+    movePaddle(deltaTime);
     moveBall(deltaTime);
   }
+
+   /*function updateGame(deltaTime) {
+    if (paused) { movePaddle(deltaTime); return; }  // able to move the paddle when paused
+    moveBall(deltaTime);
+  }
+*/
 
   function movePaddle(deltaTime) {
     const direction = calculatePaddleDirection();
