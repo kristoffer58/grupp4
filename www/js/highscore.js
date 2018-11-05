@@ -12,9 +12,9 @@ $('.highScoreButton').click(showResults);
     let jasonData = highScoreJson;
 
 
-    $(".highscore .lista").append('<div class="list col" id="col1">#rank</div>');
-    $(".highscore .lista").append('<div class="list col" id="col2">name</div>');
-    $(".highscore .lista").append('<div class="list col" id="col3">score</div>');
+    $(".highscore .lista").append('<div class="list col" id="col1">#Rank</div>');
+    $(".highscore .lista").append('<div class="list col" id="col2">Name</div>');
+    $(".highscore .lista").append('<div class="list col" id="col3">Score</div>');
    
 
 
