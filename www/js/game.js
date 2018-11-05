@@ -322,6 +322,7 @@ $('.play-game').click(function() {
   $('.startsida').show();
   $('.game').hide();
   $('.highscore').hide();
+  resetHighscoreList()
 });
 
 $('.highScoreButton').click(function(){
@@ -332,4 +333,5 @@ $('.highScoreButton').click(function(){
 $('.back').click(function(){
   $('.startsida').show();
   $('.highscore').hide();
+  resetHighscoreList()
 });
