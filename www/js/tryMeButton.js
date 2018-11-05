@@ -22,15 +22,3 @@ function start(button){
     }
 }
 $.getJSON('/json/tryMeButton.json', start);
-
-
-
-$('#engelska').click(function(){
-    $('.langSv').hide();
-    $('.langEn').show();
-});
-
-$('#svenska').click(function(){
-    $('.langEn').hide();
-    $('.langSv').show();
-});

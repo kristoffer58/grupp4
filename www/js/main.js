@@ -55,3 +55,16 @@ function changeActiveLink(activeLink) {
   }
   $(activeLink).addClass('active');
 }
+
+//translation
+$('#engelska').click(function(){
+  $('.langSv, .langSvInline').hide();
+  $('.langEn').show();
+  $('.langEnInline').css('display', 'inline-block');
+});
+
+$('#svenska').click(function(){
+  $('.langEn, .langEnInline').hide();
+  $('.langSv').show();
+  $('.langSvInline').css('display', 'inline-block');
+});
