@@ -9,7 +9,7 @@ function sendNewHigscoreToServer(userScore) {
 
         // allot of stuff happening if user scores going on the highscore list
         //
-       
+       let userScore=jsonObj[jsonObj.length-1].score+1;
         if (userScore > jsonObj[jsonObj.length-1].score) {
             //TODO change this to a nice prompt window 
             //with 2 buttons for play again or higscore.
