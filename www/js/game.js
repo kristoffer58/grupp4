@@ -329,8 +329,8 @@ $('.play-game').click(function() {
 $('.highScoreButton').click(function(){
   $('.startsida').hide();
   $('.highscore').show();
-  resetHighscoreList();
-  showResults();
+  
+  
 });
 
 $('.back').click(function(){
