@@ -25,13 +25,14 @@ $('.startGame, .play').click(function loadGame() {
   function startNewGame() {
     lives = 3;
     score = 0;
-    paused = false;
+    //paused = false;
 
     resetPaddle();
     resetBall();
     spawnBricks();
 
     updateInterface();
+    paused = true;  // the game starts when ENTER is pressed
     startInterval();
   }
 
@@ -41,6 +42,12 @@ $('.startGame, .play').click(function loadGame() {
     movePaddle(deltaTime);
     moveBall(deltaTime);
   }
+
+   /*function updateGame(deltaTime) {
+    if (paused) { movePaddle(deltaTime); return; }  // able to move the paddle when paused
+    moveBall(deltaTime);
+  }
+*/
 
   function movePaddle(deltaTime) {
     const direction = calculatePaddleDirection();
@@ -256,6 +263,10 @@ $('.startGame, .play').click(function loadGame() {
 
     ball.width = ball.$.width();
     ball.height = ball.$.height();
+
+    ball.$.css('left', (ball.left = gameBorders.width / 2 - ball.width /2));
+    ball.$.css('top', (ball.top = paddle.top - ball.height));
+    ball.direction = { x: 1, y: -1 };
   }
 
   function spawnBricks() {
@@ -283,22 +294,22 @@ $('.startGame, .play').click(function loadGame() {
     prevLeft = brickCSS.left;
 
     for (let color of colors) {
-      const brick = createBrick(prevLeft + 35, brickCSS.top + 25, brickCSS.width, brickCSS.height, color);
+      const brick = createBrick(prevLeft, brickCSS.top + brickCSS.height, brickCSS.width, brickCSS.height, color);
 
       bricks.push(brick);
       $('.game').append(brick.$);
 
-      prevLeft += brickCSS.width * 2;
+      prevLeft += brickCSS.width * 1;
     }
     prevLeft = brickCSS.left;
 
     for (let color of colors) {
-      const brick = createBrick(prevLeft - 20,  brickCSS.top + 60, brickCSS.width, brickCSS.height, color);
+      const brick = createBrick(prevLeft,  brickCSS.top + brickCSS.height + brickCSS.height, brickCSS.width, brickCSS.height, color);
 
       bricks.push(brick);
       $('.game').append(brick.$);
 
-      prevLeft += brickCSS.width * 2;
+      prevLeft += brickCSS.width * 1;
     }
   }
 
