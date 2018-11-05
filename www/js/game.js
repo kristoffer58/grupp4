@@ -100,6 +100,26 @@ $('.startGame, .play').click(function loadGame() {
 
   function collisionDetectBallAndPaddle() {
     if (!isRectAOutsideRectB(ball, paddle)) {
+      // if the ball touches first 50 pixels of the paddle and the ball approaches from left to right side - go back left
+      if (ball.left <= paddle.left + 50){
+        if(ball.direction.x >= 0) {
+          ball.direction.x *= -1;  
+        }
+        else {
+          ball.direction.x *= +1;
+        }
+      }
+      // if the ball touches last 50 pixels of the paddle and the ball approaches from right to right side - go back right
+      else if (ball.left >= paddle.left + 250){
+        if (ball.direction.x <=0) {
+          ball.direction.x *= -1;
+        }
+        else {
+          ball.direction.x *= +1;  
+        }
+        
+      }
+
       ball.direction.y *= -1;
       ball.top = paddle.top - ball.height;
       score += 5;
@@ -224,7 +244,7 @@ $('.startGame, .play').click(function loadGame() {
     ball.$ = $('.ball');
     ball.speed = initialBallSpeed;
     ball.$.css('left', (ball.left = gameBorders.width / 2 - 15));
-    ball.$.css('top', (ball.top = paddle.top - 30));
+    ball.$.css('top', (ball.top = paddle.top - paddle.height));
     ball.direction = { x: 1, y: 1 };
 
     ball.width = ball.$.width();
