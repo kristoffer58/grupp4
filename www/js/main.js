@@ -21,6 +21,8 @@ frontendRouter(location.pathname);
 
 // The router (do whatever you want here)
 function frontendRouter(path) {
+  clearInterval(window.gameInterval);
+  bgsound.load();
   let routes = {
     '/': () => {
       $('body main > *').hide(); $('.Start').show();
@@ -61,10 +63,14 @@ $('#engelska').click(function(){
   $('.langSv, .langSvInline').hide();
   $('.langEn').show();
   $('.langEnInline').css('display', 'inline-block');
+  $('#engelska').hide();
+  $('#svenska').show();
 });
 
 $('#svenska').click(function(){
   $('.langEn, .langEnInline').hide();
   $('.langSv').show();
   $('.langSvInline').css('display', 'inline-block');
+  $('#engelska').show();
+  $('#svenska').hide();
 });
