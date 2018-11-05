@@ -196,7 +196,7 @@ function loadGame() {
 
   function updateInterface() {
     
-    $('.score span').text((score + '').padStart(5, '0'));
+    $('.score span').text((score + '').padStart(4, '0'));
     $('.lives span').text(lives);
     $('.main-text').hide();
     if (lives < 1) {
