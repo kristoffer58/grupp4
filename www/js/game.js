@@ -14,8 +14,11 @@ $('.startGame, .play').click(function loadGame() {
   const paddle = {};
   const ball = {};
   let gameBorders = loadGameBorders();
-  let hitSound = new Audio('/sounds/hit.wav')
-  let liveLost = new Audio('/sounds/liveLost.wav')
+  let hitSound = new Audio('/sounds/hit.wav');
+  let liveLost = new Audio('/sounds/liveLost.wav');
+  let bgsound = new Audio('/sounds/bg_music.mp3');
+  bgsound.loop = true;
+  bgsound.play();
 
   // Setup key listeners before starting the first game
   setupKeyListeners();
