@@ -1,9 +1,43 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-[{"name":"luk","score":"602"},{"name":"luk1","score":"601"},{"name":"","score":"120"},{"name":"luk","score":"120"},{"name":"luk","score":"115"},{"name":"luk","score":"115"},{"name":"luk","score":"100"},{"name":"luk","score":"100"},{"name":"luk","score":"95"},{"name":"luk","score":"90"}]
-=======
-[{"name":"luk","score":"602"},{"name":"luk1","score":"601"},{"name":"luk","score":"115"},{"name":"luk","score":"115"},{"name":"luk","score":"1"},{"name":"luk","score":"1"}]
->>>>>>> master
-=======
-[{"name":"melli","score":"45"},{"name":"","score":"0"},{"name":"","score":"0"},{"name":"","score":"0"},{"name":"","score":"0"},{"name":"","score":"0"},{"name":"","score":"0"},{"name":"","score":"0"},{"name":"","score":"0"},{"name":"","score":"0"}]
->>>>>>> master
+
+[
+    {
+        "name": "luk",
+        "score": "602"
+    },
+    {
+        "name": "luk1",
+        "score": "601"
+    },
+    {
+        "name": "",
+        "score": "120"
+    },
+    {
+        "name": "luk",
+        "score": "120"
+    },
+    {
+        "name": "luk",
+        "score": "115"
+    },
+    {
+        "name": "luk",
+        "score": "115"
+    },
+    {
+        "name": "luk",
+        "score": "100"
+    },
+    {
+        "name": "luk",
+        "score": "100"
+    },
+    {
+        "name": "luk",
+        "score": "95"
+    },
+    {
+        "name": "luk",
+        "score": "90"
+    }
+]

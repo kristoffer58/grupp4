@@ -185,7 +185,8 @@ $('.startGame, .play').click(function loadGame() {
       $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
       sendNewHigscoreToServer(score) // this one is in newHighscore.js 
      } else if (paused) {
-      $('.main-text').text('PAUSED - press ENTER to continue...');
+      
+      
     } else {
       $('.main-text').text('');
     }
@@ -343,16 +344,18 @@ $('.play-game').click(function() {
   $('.startsida').show();
   $('.game').hide();
   $('.highscore').hide();
-  resetHighscoreList()
+  resetHighscoreList();
 });
 
 $('.highScoreButton').click(function(){
   $('.startsida').hide();
   $('.highscore').show();
+  
+  
 });
 
 $('.back').click(function(){
   $('.startsida').show();
   $('.highscore').hide();
-  resetHighscoreList()
+  resetHighscoreList();
 });

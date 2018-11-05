@@ -46,7 +46,7 @@ function submit() {
 
 }
 
-$(document).on('click', '#highscoreSubmit', function name() {
+$(document).on('click', '#highscoreSubmit', function() {
     submit();
 });
 
