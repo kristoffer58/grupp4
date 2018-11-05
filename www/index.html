@@ -36,12 +36,13 @@
 		</nav>
 	</header>
 	<main>
+	
 		<section class="Start">
 			<div class="container mt-5 mb-4">
 				<div class="row mr-2 ml-2">
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout1.PNG" alt="Card image cap" onclick="openModal();currentSlide(1)">
+							<img class="card-img-top" src="/images/breakout1.PNG" alt="Card image cap" data-toggle="modal" data-target="#cardsModal">
 							<div class="card-body">
 								<h5 class="card-title">Sparkanoid</h5>
 								<a href="http://www.gamesxl.com/arcade/sparkanoid" target="_blank" class="btn btn-primary"></a>
@@ -50,7 +51,7 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout2.PNG" alt="Card image cap" onclick="openModal();currentSlide(2)">
+							<img class="card-img-top" src="/images/breakout2.PNG" alt="Card image cap" data-toggle="modal" data-target="#cardsModal">
 							<div class="card-body">
 								<h5 class="card-title">Atari Breakout</h5>
 								<a href="https://www.crazygames.com/game/atari-breakout" target="_blank" class="btn btn-primary"></a>
@@ -59,7 +60,7 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout3.PNG" alt="Card image cap" onclick="openModal();currentSlide(3)">
+							<img class="card-img-top" src="/images/breakout3.PNG" alt="Card image cap" data-toggle="modal" data-target="#cardsModal">
 							<div class="card-body">
 								<h5 class="card-title">Breakout 5</h5>
 								<a href="http://o.www.spela.se/spel_/breakout_5" target="_blank" class="btn btn-primary"></a>
@@ -68,7 +69,7 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout4.PNG" alt="Card image cap" onclick="openModal();currentSlide(4)">
+							<img class="card-img-top" src="/images/breakout4.PNG" alt="Card image cap" data-toggle="modal" data-target="#cardsModal">
 							<div class="card-body">
 								<h5 class="card-title">Breakout Wars</h5>
 								<a href="https://www.y8.com/games/breakout_wars" target="_blank" class="btn btn-primary"></a>
@@ -77,7 +78,7 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout5.PNG" alt="Card image cap" onclick="openModal();currentSlide(5)">
+							<img class="card-img-top" src="/images/breakout5.PNG" alt="Card image cap" data-toggle="modal" data-target="#cardsModal">
 							<div class="card-body">
 								<h5 class="card-title">Yet Another Breakout</h5>
 								<a href="https://www.y8.com/games/yet_another_breakout" target="_blank" class="btn btn-primary"></a>
@@ -86,46 +87,26 @@
 					</div>
 					<div class="col-lg-8 col-sm-12 mb-4">
 						<div class="card">
-							<img class="card-img-top" src="/images/breakout6.PNG" alt="Card image cap" onclick="openModal();currentSlide(6)">
+							<img class="card-img-top" src="/images/breakout6.PNG" alt="Card image cap" data-toggle="modal" data-target="#cardsModal">
 							<div class="card-body">
 								<h5 class="card-title">Master Breakout</h5>
 								<a href="https://www.y8.com/games/master_breakout" target="_blank" class="btn btn-primary"></a>
 							</div>
 						</div>
 					</div>
+					
 				</div>
 			</div>
-			<div id="myModal" class="modal">
-				<span class="close cursor" onclick="closeModal()">&times;</span>
-				<div class="modal-content">
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="next" onclick="plusSlides(1)">&#10095;</a>
-					<div class="mySlides">
-						<div class="numbertext">1 / 6</div>
-						<img src="/images/breakout1.PNG" alt="Card image cap">
-					</div>
-					<div class="mySlides">
-						<div class="numbertext">2 / 6</div>
-						<img src="/images/breakout2.PNG" alt="Card image cap">
-					</div>
-					<div class="mySlides">
-						<div class="numbertext">3 / 6</div>
-						<img src="/images/breakout3.PNG" alt="Card image cap">
-					</div>
-					<div class="mySlides">
-						<div class="numbertext">4 / 6</div>
-						<img src="/images/breakout4.PNG" alt="Card image cap">
-					</div>
-					<div class="mySlides">
-						<div class="numbertext">5 / 6</div>
-						<img src="/images/breakout5.PNG" alt="Card image cap">
-					</div>
-					<div class="mySlides">
-						<div class="numbertext">6 / 6</div>
-						<img src="/images/breakout6.PNG" alt="Card image cap">
+			<div class="modal fade" id="cardsModal" role="dialog">
+				<div class="modal-dialog modal-dialog-centered modal-sm">
+					<div class="modal-content">
+						<div class="cards-modal-body">
+							<img src="/images/breakout1.PNG" alt="Card image cap">
+						</div>
 					</div>
 				</div>
 			</div>
+
 		</section>
 
 		<section class="Historia">
@@ -288,7 +269,7 @@
 					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 						<div class="modal-content">
 							<div class="modal-header d-block">
-								<h5 class="modal-title text-center" id="instructionsModalLongTitle">Instructions</h5>
+								<h5 class="modal-title" id="instructionsModalLongTitle">Instructions</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
@@ -306,15 +287,11 @@
 
 			<div class='highscore'>
 				<h1>High Score</h1>
-				<div class=lista></div>
+				<div class="lista row"></div>
 				<p class="back">Tillbaka</p>
 				<p class="play">Spela</p>
 			</div>
-
-
 		</section>
-
-
 
 	</main>
 	<footer class="container-fluid bg-retro mt-4 text-light p-4">
@@ -353,6 +330,7 @@
 	<script src="/js/game.js"></script>
 	<script src="/js/modal.js"></script>
 	<script src="/js/history.js"></script>
+	<script src="/js/highscore.js"></script>
 	<script src="/js/cards-lightbox.js"></script>
 	<script src="/js/instructions.js"></script>
 	<script src="/js/main.js"></script>
