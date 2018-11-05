@@ -120,7 +120,7 @@ function loadGame() {
   function collisionDetectBallAndPaddle() {
     if (!isRectAOutsideRectB(ball, paddle)) {
       // if the ball touches first 50 pixels of the paddle and the ball approaches from left to right side - go back left
-      if (ball.left <= paddle.left + 50){
+      if (ball.left <= paddle.left + paddle.width / 5){
         if(ball.direction.x >= 0) {
           ball.direction.x *= -1;  
         }
@@ -129,7 +129,7 @@ function loadGame() {
         }
       }
       // if the ball touches last 50 pixels of the paddle and the ball approaches from right to right side - go back right
-      else if (ball.left >= paddle.left + 250){
+      else if (ball.left >= paddle.left + paddle.width / 5 * 4){
         if (ball.direction.x <=0) {
           ball.direction.x *= -1;
         }
@@ -210,7 +210,7 @@ function loadGame() {
     }
     if (bricks.length<1) {
       //   $('.main-text').text('CONGRATULATIONS - YOU WON');
-         sendNewHigscoreToServer(score) // this one is in newHighscore.js 
+        // sendNewHigscoreToServer(score) // this one is in newHighscore.js 
        
     $('.main-text').fadeIn(500);
     }

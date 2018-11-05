@@ -1,9 +1,9 @@
 .game {
   position: relative;
-  background-image: url("/images/bg-3.jpg") ;
+  background-image: url("/images/bg-3.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   //color: white;
   height: 70vh;
   width: 60vw;
@@ -24,6 +24,7 @@
     p{
       display:inline-block;
       margin-right: 4px;
+      font-size: 0.7em;
     }
     .langEnInline{
       display:none;
@@ -37,6 +38,7 @@
     p{
       display:inline-block;
       margin-right: 4px;
+      font-size: 0.7em;
     }
     .langEnInline{
       display:none;
@@ -52,8 +54,8 @@
   }
    
   .paddle {
-    width: 15%;
-    height: 3%;   
+    width: 10vw;
+    height: 1.5vh;   
     position: absolute;
     border-radius: 25px;
     bottom: 0;
@@ -90,7 +92,7 @@
   .brick {
     width: 5vw;
     height: 2vh;
-    left: 20%;
+    left: 29%;
     top: 40%;
     background-color: #777;
     position: absolute;
