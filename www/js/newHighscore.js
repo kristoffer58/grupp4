@@ -1,15 +1,16 @@
-let newHigscore;
-let newName;
+let score;
+
 function sendNewHigscoreToServer(userScore) {
     console.log(userScore);
-    newHigscore = userScore;
+
     $.getJSON('/json/highscore.json', checkIfNewHighscore);
 
     function checkIfNewHighscore(jsonObj) {
 
         // allot of stuff happening if user scores going on the highscore list
         //
-        if (userScore > jsonObj[9].score) {
+        userScore = jsonObj[jsonObj.length-1].score*1 + 1;
+        if (userScore > jsonObj[jsonObj.length-1].score) {
             //TODO change this to a nice prompt window 
             //with 2 buttons for play again or higscore.
             //this is NOT an invetation to fuck with this.
@@ -17,32 +18,32 @@ function sendNewHigscoreToServer(userScore) {
             //make some kind of thread blocking... 
             //merge this shit and connect it with highscore window 
             // let name =  prompt("New highscore whats your name?")
-            $(".newHighscoreInput").append("<form>");
-            $(".newHighscoreInput").append('Your name:<input type="text" id="highscoreName" name="highscoreName">');
-            $(".newHighscoreInput").append('<input type="submit" onclick="submit()" name="highscoreSubmit">');
-            $(".newHighscoreInput").append("</form>");
-
-
-
+            let form = $('<form id="newHigscoreForm">');
             
+            $(form).append('Your name:<input type="text" id="highscoreName" name="highscoreName">');
+            $(form).append('<input type="button" id="highscoreSubmit">');
+            $(".newHighscoreInput").append(form);
 
+
+
+            score = userScore;
+           
 
 
 
         }
         console.log(jsonObj);
-        console.log(jsonObj[5].userScore);
     }
 }
 function submit() {
-
-    //    $.post("/add-score",{name,score},null);
-    console.log($("#highscoreName").val());
-    console.log($(newHigscore));
+    let name=$("#highscoreName").val();
+        $.post("/add-score",{name,score},null);
+    console.log(name);
+    console.log((score));
+    $("#newHigscoreForm").remove();
 }
 
-$("#highscoreSubmit").click(function name() {
-    newName = $("#highscoreName").val();
+$(document).on('click', '#highscoreSubmit', function name() {
     submit();
 });
 
