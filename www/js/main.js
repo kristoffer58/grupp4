@@ -61,10 +61,14 @@ $('#engelska').click(function(){
   $('.langSv, .langSvInline').hide();
   $('.langEn').show();
   $('.langEnInline').css('display', 'inline-block');
+  $('#engelska').hide();
+  $('#svenska').show();
 });
 
 $('#svenska').click(function(){
   $('.langEn, .langEnInline').hide();
   $('.langSv').show();
   $('.langSvInline').css('display', 'inline-block');
+  $('#engelska').show();
+  $('#svenska').hide();
 });
