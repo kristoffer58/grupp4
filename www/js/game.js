@@ -247,16 +247,14 @@ $('.startGame, .play').click(function loadGame() {
 
   //ball position 
   function resetBall() {
-
     ball.$ = $('.ball');
     ball.speed = initialBallSpeed;
-    
+    ball.$.css('left', (ball.left = gameBorders.width / 2 - 15));
+    ball.$.css('top', (ball.top = paddle.top - paddle.height));
+    ball.direction = { x: 1, y: 1 };
+
     ball.width = ball.$.width();
     ball.height = ball.$.height();
-
-    ball.$.css('left', (ball.left = gameBorders.width / 2 - ball.width /2));
-    ball.$.css('top', (ball.top = paddle.top - paddle.height));
-    ball.direction = { x: 1, y: -1 };
   }
 
   function spawnBricks() {
@@ -324,7 +322,7 @@ $('.play-game').click(function() {
   $('.startsida').show();
   $('.game').hide();
   $('.highscore').hide();
-   resetHighScoreList();
+  resetHighscoreList()
 });
 
 $('.highScoreButton').click(function(){
@@ -335,5 +333,5 @@ $('.highScoreButton').click(function(){
 $('.back').click(function(){
   $('.startsida').show();
   $('.highscore').hide();
-  resetHighScoreList();
+  resetHighscoreList()
 });

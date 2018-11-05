@@ -27,3 +27,6 @@ $('.highScoreButton').click(showResults);
     }
   }
 }
+function resetHighscoreList(){
+  $('#col1,#col2, #col3').remove()
+}
