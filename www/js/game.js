@@ -184,15 +184,17 @@ $('.startGame, .play').click(function loadGame() {
     if (lives < 1) {
       $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
       sendNewHigscoreToServer(score) // this one is in newHighscore.js 
-    } else if (!bricks.length) {
-   //   $('.main-text').text('CONGRATULATIONS - YOU WON');
-      sendNewHigscoreToServer(score) // this one is in newHighscore.js 
-    } else if (paused) {
+     } else if (paused) {
       $('.main-text').text('PAUSED - press ENTER to continue...');
     } else {
       $('.main-text').text('');
     }
+    if (!bricks.length) {
+      //   $('.main-text').text('CONGRATULATIONS - YOU WON');
+         sendNewHigscoreToServer(score) // this one is in newHighscore.js 
+       
     $('.main-text').fadeIn(500);
+    }
   }
 
   function onEnterPress() {
