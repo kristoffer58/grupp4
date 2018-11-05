@@ -42,7 +42,7 @@ function submit() {
     $("#newHigscoreForm").remove();
     $('.game').hide();
     $('.highscore').show();
-   
+    resetHighscoreList();
     showResults();
 
 }
