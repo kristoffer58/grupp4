@@ -185,7 +185,7 @@ $('.startGame, .play').click(function loadGame() {
       $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
       sendNewHigscoreToServer(score) // this one is in newHighscore.js 
     } else if (!bricks.length) {
-      $('.main-text').text('CONGRATULATIONS - YOU WON');
+   //   $('.main-text').text('CONGRATULATIONS - YOU WON');
       sendNewHigscoreToServer(score) // this one is in newHighscore.js 
     } else if (paused) {
       $('.main-text').text('PAUSED - press ENTER to continue...');
