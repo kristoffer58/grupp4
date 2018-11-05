@@ -1,17 +1,21 @@
-
+h5 {
+    color: rgb(55, 35, 145);
+    font-size: 23px;
+    text-align: center;
+}
 .modal-body p {
     font-size: 1.5em;
     color: rgb(55, 35, 145);
     text-decoration: none;
     line-height: 2em;
+    font-size: 18px;
 }
 
 .modal-body {
     pointer-events: none;
 }
 
-//#instructionsModalCenter .close {
-   // margin-top: -2.6rem;
-  //}
+#instructionsModalCenter .close {
+    margin-top: -2.6rem;
+  }
 
-  
