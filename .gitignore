@@ -64,6 +64,6 @@ typings/
 
 www/css/
 
-www/json/highscore.json
+/www/json/highscore.json
 
 .DS_Store
