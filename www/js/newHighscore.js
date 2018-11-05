@@ -9,7 +9,7 @@ function sendNewHigscoreToServer(userScore) {
 
         // allot of stuff happening if user scores going on the highscore list
         //
-       let userScore=jsonObj[jsonObj.length-1].score+1;
+     //  let userScore=jsonObj[jsonObj.length-1].score+1;
         if (userScore > jsonObj[jsonObj.length-1].score) {
             //TODO change this to a nice prompt window 
             //with 2 buttons for play again or higscore.
@@ -23,13 +23,7 @@ function sendNewHigscoreToServer(userScore) {
             $(form).append('<button class="btn btn-primary" type="button" id="highscoreSubmit" >Submit</button>');
             $(".newHighscoreInput").append(form);
             $(".newHighscoreInput").append('</form>');
-
-
             score = userScore;
-           
-
-
-
         }
         console.log(jsonObj);
     }
@@ -39,11 +33,12 @@ function submit() {
         $.post("/add-score",{name,score},null);
     console.log(name);
     console.log((score));
+    showResults();
     $("#newHigscoreForm").remove();
+    $('.game .brick').remove();
     $('.game').hide();
     $('.highscore').show();
-    showResults();
-
+    
 }
 
 $(document).on('click', '#highscoreSubmit', function() {
