@@ -209,6 +209,13 @@ function loadGame() {
       $('.main-text').text('');
     }
     if (bricks.length<1) {
+      resetPaddle();
+      resetBall();
+      spawnBricks();
+      ball.speed = ball.speed + 100;
+      initialBallSpeed = initialBallSpeed + 100;  // must define that you are on stage <= 2 and set new initialBallSpeed to maintain ball.speed even after losing a life.
+
+
       //   $('.main-text').text('CONGRATULATIONS - YOU WON');
         // sendNewHigscoreToServer(score) // this one is in newHighscore.js 
        
