@@ -214,21 +214,21 @@ function loadGame() {
 
     // when all bricks are knocked down and
     if (bricks.length<1 ) {
-      // function startInterval() {
-      //   const updateSpeed = 10; // lower = faster
-      //   clearInterval(window.gameInterval);
-      //   // Wait a short delay before starting to let the player prepare
-      //   setTimeout(() => {
-      //     let previousTime = performance.now() - updateSpeed;
-      //     window.gameInterval = setInterval(() => {
-      //       const now = performance.now();
-      //       updateGame((now - previousTime) / 1000);
-      //       previousTime = now;
-      //     }, updateSpeed);
-      //   }, 1000);
-      // }
+      function startInterval() {
+        const updateSpeed = 10; // lower = faster
+        clearInterval(window.gameInterval);
+        // Wait a short delay before starting to let the player prepare
+        setTimeout(() => {
+          let previousTime = performance.now() - updateSpeed;
+          window.gameInterval = setInterval(() => {
+            const now = performance.now();
+            updateGame((now - previousTime) / 1000);
+            previousTime = now;
+          }, updateSpeed);
+        }, 1000);
+      }
 
-      // startInterval();
+      startInterval();
       resetPaddle();
       resetBall();
       spawnBricks();
