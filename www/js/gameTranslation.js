@@ -1,6 +1,6 @@
 function gametrans(gameText){
 
-    let scorenummber=$('<span>00000</span>');
+    let scorenummber=$('<span>0000</span>');
     let livnummbers = $('<span>3</span>');
 
 
