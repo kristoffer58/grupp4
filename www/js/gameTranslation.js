@@ -49,7 +49,7 @@ function gametrans(gameText){
           $('.score, .scoreGameOver').append(pscore);
           $('.lives').append(plives);
           $('.lives').append(livnummbers);
-          $('.score, .scoreGameOver').append(scorenummber);
+          $('.score, .scoreGameOver, .newHighscoreInput').append(scorenummber);
 
         }
     }

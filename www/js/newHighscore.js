@@ -19,11 +19,15 @@ function sendNewHigscoreToServer(userScore) {
             //merge this shit and connect it with highscore window 
             // let name =  prompt("New highscore whats your name?")
             let form = $('<form id="newHigscoreForm">');
-            $(form).append('Your name:<input type="text" id="highscoreName" name="highscoreName" maxlength="5">');
+            $(form).append('<h1>New High Score</h1>');
+            $(form).append('<input type="text" id="highscoreName" name="highscoreName" maxlength="5" placeholder="Enter Name">');
             $(form).append('<button class="btn btn-primary" type="button" id="highscoreSubmit" >Submit</button>');
             $(".newHighscoreInput").append(form);
             $(".newHighscoreInput").append('</form>');
             score = userScore;
+
+            $('.game').hide();
+            $('.newHighscoreInput').show();
         }
         else{
             $('.gameOver').show();
@@ -38,7 +42,7 @@ function submit() {
     console.log(name);
     console.log((score));
     $("#newHigscoreForm").remove();
-    $('.game').hide();
+    $('.newHighscoreInput').hide();
     $('.highscore').show();
     showResults();
 }

@@ -197,7 +197,7 @@ function loadGame() {
 
   function updateInterface() {
     
-    $('.score span, .scoreGameOver span').text((score + '').padStart(4, '0'));
+    $('.score span, .scoreGameOver span, .newHighscoreInput span').text((score + '').padStart(4, '0'));
     $('.lives span').text(lives);
     $('.main-text').hide();
     if (lives < 1) {    // reset ball speed back to initial here ??
