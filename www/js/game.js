@@ -17,8 +17,8 @@ function loadGame() {
   let paused;
   const bricks = [];
   const keysPressed = {};
-  const initialPaddleSpeed = 400;
-  const initialBallSpeed = 200;
+  const initialPaddleSpeed = 500;
+  const initialBallSpeed = 300;
   const paddle = {};
   const ball = {};
   let gameBorders = loadGameBorders();
@@ -211,16 +211,34 @@ function loadGame() {
     } else {
       $('.main-text').text('');
     }
-    if (bricks.length<1) {
+
+    // when all bricks are knocked down and
+    if (bricks.length<1 ) {
+      // function startInterval() {
+      //   const updateSpeed = 10; // lower = faster
+      //   clearInterval(window.gameInterval);
+      //   // Wait a short delay before starting to let the player prepare
+      //   setTimeout(() => {
+      //     let previousTime = performance.now() - updateSpeed;
+      //     window.gameInterval = setInterval(() => {
+      //       const now = performance.now();
+      //       updateGame((now - previousTime) / 1000);
+      //       previousTime = now;
+      //     }, updateSpeed);
+      //   }, 1000);
+      // }
+
+      // startInterval();
       resetPaddle();
       resetBall();
       spawnBricks();
       ball.speed = ball.speed + 100;
       initialBallSpeed = initialBallSpeed + 100;  // must define that you are on stage <= 2 and set new initialBallSpeed to maintain ball.speed even after losing a life.
 
+      // updateInterface();
 
       //   $('.main-text').text('CONGRATULATIONS - YOU WON');
-        // sendNewHigscoreToServer(score) // this one is in newHighscore.js 
+        sendNewHigscoreToServer(score) // this one is in newHighscore.js 
        
     $('.main-text').fadeIn(500);
     }

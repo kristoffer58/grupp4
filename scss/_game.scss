@@ -5,8 +5,8 @@
   background-position: center;
   background-size: cover;
   //color: white;
-  height: 70vh;
-  width: 60vw;
+  height: 70vh; // default 70vh
+  width: 60vw;  // default 60vw
   margin: auto;
   border: 5px groove rgb(108, 75, 150);
   display: none;
@@ -54,8 +54,8 @@
   }
    
   .paddle {
-    width: 10vw;
-    height: 2vh;   
+    width: 8vw;  // default 10vw
+    height: 2vh;  // default 2vh
     position: absolute;
     border-radius: 25px;
     bottom: 0;
@@ -65,6 +65,7 @@
       rgb(133, 108, 226) 20%,
       rgb(36, 6, 85) 
     );
+  }
 /*
     &:after {
       content: ‘’;
