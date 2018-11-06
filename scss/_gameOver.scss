@@ -1,18 +1,18 @@
-.highscore{
+.gameOver{
     color:white;
     height: 70vh;
-    width: 60%;
+    width: 60vw;
     background-color: black;
     margin: auto;
     border: 5px groove #6c4b96;
-    display: block;
+    display:block;
     text-align: center;
     position: relative;
-    display: none;
+    display:none;
 
     h1{
-        font-size: 5vw;
-        margin-top: 5%;
+        font-size: 7vw;
+        margin-top: 3%;
     }
 
     .back{
@@ -21,32 +21,6 @@
         left: 20px;
         font-size: 3vh;
         color:#007bff;
-
-        &:hover{
-            cursor: pointer;
-
-            text-decoration: blink;
-            -webkit-animation-name: blinker;
-            -webkit-animation-duration: 0.7s;
-            -webkit-animation-iteration-count:infinite;
-            -webkit-animation-timing-function:ease-in-out;
-            -webkit-animation-direction: alternate;
-            @-webkit-keyframes blinker {
-              from {opacity: 1.0;}
-              to {opacity: 0.5;}
-            }
-            
-            text-decoration: underline;
-        }
-    }
-
-    .backGameOver{
-        position: absolute;
-        bottom: 0;
-        left: 20px;
-        font-size: 3vh;
-        color:#007bff;
-        display: none;
 
         &:hover{
             cursor: pointer;
@@ -90,4 +64,78 @@
             text-decoration: underline;
         }
     }
+
+    .highScoreButtonOver{
+        position: absolute;
+        width: 250px;
+        top: 58%;
+        left:50%;
+        margin-left:-125px;
+        text-align: center;
+        font-size: 4vh;
+        color:#007bff;
+
+        &:hover{
+            cursor: pointer;
+
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 0.7s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+            @-webkit-keyframes blinker {
+              from {opacity: 1.0;}
+              to {opacity: 0.5;}
+            }
+
+            text-decoration: underline;
+        }
+    }
+
+    .Instructions{
+        position: absolute;
+        width: 250px;
+        top: 70%;
+        left: 50%;
+        margin-left:-125px;
+        text-align: center;
+        font-size: 4vh;
+        color:#007bff;
+
+        &:hover{
+            cursor: pointer;
+
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 0.7s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+            @-webkit-keyframes blinker {
+              from {opacity: 1.0;}
+              to {opacity: 0.5;}
+            }
+
+            text-decoration: underline;
+        }
+    }
+    .scoreGameOver {
+        position: absolute;
+        width: 500px;
+        left:50%;
+        margin-left:-250px;
+        top:35%;
+        vertical-align:middle;
+        font-size: 3.5vw;
+        color:white;
+        p{
+          display:inline-block;
+          margin-right: 7px;
+        }
+        .langEnInline{
+          display:none;
+        }
+      }
+
 }

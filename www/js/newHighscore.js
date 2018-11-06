@@ -25,6 +25,10 @@ function sendNewHigscoreToServer(userScore) {
             $(".newHighscoreInput").append('</form>');
             score = userScore;
         }
+        else{
+            $('.gameOver').show();
+            $('.game').hide();
+        }
         console.log(jsonObj);
     }
 }
