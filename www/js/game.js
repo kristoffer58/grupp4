@@ -5,7 +5,7 @@ let liveLost = new Audio('/sounds/liveLost.wav');
 let bgsound = new Audio('/sounds/bg_music.mp3');
 
 function showGame() {
-  $('.startsida, .highscore').hide();
+  $('.startsida, .highscore, .gameOver').hide();
   $('.game').show();
 }
 
@@ -49,6 +49,7 @@ function loadGame() {
 
   function updateGame(deltaTime) {
     if (paused) { return; }
+    bgsound.play();
 
     movePaddle(deltaTime);
     moveBall(deltaTime);
@@ -196,14 +197,16 @@ function loadGame() {
 
   function updateInterface() {
     
-    $('.score span').text((score + '').padStart(4, '0'));
+    $('.score span, .scoreGameOver span').text((score + '').padStart(4, '0'));
     $('.lives span').text(lives);
     $('.main-text').hide();
     if (lives < 1) {
       $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
-      sendNewHigscoreToServer(score) // this one is in newHighscore.js 
+      sendNewHigscoreToServer(score) // this one is in newHighscore.js
+
      } else if (paused) {
-      
+      $('.main-text').text('PAUSED - press ENTER to continue...');
+      bgsound.pause();
       
     } else {
       $('.main-text').text('');
@@ -372,12 +375,28 @@ $('.play-game').click(function() {
 $('.highScoreButton').click(function(){
   $('.startsida').hide();
   $('.highscore').show();
+  $('.backGameOver').hide();
+  $('.back').show();
   
-  
+});
+
+$('.highScoreButtonOver').click(function(){
+  $('.gameOver').hide();
+  $('.highscore').show();
+  $('.backGameOver').show();
+  $('.back').hide();
 });
 
 $('.back').click(function(){
   $('.startsida').show();
+  $('.highscore, .gameOver').hide();
+  resetHighscoreList();
+});
+
+$('.backGameOver').click(function(){
+  $('.gameOver').show();
   $('.highscore').hide();
+  $('.backGameOver').hide();
+  $('.back').show();
   resetHighscoreList();
 });
