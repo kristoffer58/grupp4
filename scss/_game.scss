@@ -98,10 +98,21 @@
    
   .ball {
     position: absolute;
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
     background: radial-gradient(circle at 10px 10px, #ffffff, rgb(53, 53, 53));
     border-radius: 50%;
+
+    -webkit-animation: rotation 2s infinite linear;
+  
+  @-webkit-keyframes rotation {
+      from {
+          -webkit-transform: rotate(0deg);
+      }
+      to {
+          -webkit-transform: rotate(359deg);
+      }
+  }
   }
 
   .game-over {

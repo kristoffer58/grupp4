@@ -18,10 +18,10 @@ function gametrans(gameText){
             pscore.append(langSv.score);
             plives.append(langSv.lives);
         }
-        $('.highScoreButton, .highscore h1').append(phighscore);
+        $('.highScoreButton, .highscore h1, .highScoreButtonOver').append(phighscore);
         $('.Instructions').append(pinstuctions);
-        $('.back').append(pback);
-        $('.score').append(pscore);
+        $('.back, .backGameOver').append(pback);
+        $('.score, .scoreGameOver').append(pscore);
         $('.lives').append(plives);
         $('.lives').append(livnummbers);
         $('.score').append(scorenummber);
@@ -43,13 +43,13 @@ function gametrans(gameText){
             plives.append(langEn.lives);
           }
 
-          $('.highScoreButton, .highscore h1').append(phighscore);
+          $('.highScoreButton, .highscore h1, .highScoreButtonOver').append(phighscore);
           $('.Instructions').append(pinstuctions);
-          $('.back').append(pback);
-          $('.score').append(pscore);
+          $('.back, .backGameOver').append(pback);
+          $('.score, .scoreGameOver').append(pscore);
           $('.lives').append(plives);
           $('.lives').append(livnummbers);
-          $('.score').append(scorenummber);
+          $('.score, .scoreGameOver').append(scorenummber);
 
         }
     }

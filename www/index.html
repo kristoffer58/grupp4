@@ -36,7 +36,7 @@
 		</nav>
 	</header>
 	<main>
-	
+
 		<section class="Start">
 			<div class="container mt-5 mb-4">
 				<div class="row mr-2 ml-2">
@@ -94,7 +94,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 			<div class="modal fade" id="cardsModal" role="dialog">
@@ -258,12 +258,43 @@
 				<div class="paddle"></div>
 				<div class="main-text"></div>
 				<div class="newHighscoreInput"></div>
-				
+
 			</div>
 			<div class='startsida'>
 				<h1>Breakout</h1>
 				<p class='startGame'>Start</p>
 				<p class='highScoreButton'></p>
+				<p class="Instructions" data-toggle="modal" data-target="#instructionsModal"></p>
+
+				<div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructionsModalTitle"
+				 aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg">
+						<div class="modal-content d-block">
+							<div class="modal-body text-left">
+								<!-- get instructions.json -->
+							</div>
+							<div class="modal-footer d-block">
+								<button type="button" class="btn text-center btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class='highscore'>
+				<h1></h1>
+				<div class="lista row"></div>
+				<p class="back"></p>
+				<p class="backGameOver"></p>
+				<p class="play">Spela</p>
+			</div>
+
+			<div class='gameOver'>
+				<h1>Game Over</h1>
+
+				<div class="scoreGameOver"></div>
+
+				<p class='highScoreButtonOver'></p>
 				<p class="Instructions" data-toggle="modal" data-target="#instructionsModalCenter"></p>
 				
 				<div class="modal fade" id="instructionsModalCenter" tabindex="-1" role="dialog" aria-labelledby="instructionsModalCenterTitle"
@@ -279,11 +310,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class='highscore'>
-				<h1></h1>
-				<div class="lista row"></div>
+				
 				<p class="back"></p>
 				<p class="play">Spela</p>
 			</div>
@@ -331,7 +358,7 @@
 	<script src="/js/main.js"></script>
 	<script src="/js/newHighscore.js"></script>
 	<script src="/js/gameTranslation.js"></script>
-	
+
 </body>
 
 </html>

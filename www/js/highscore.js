@@ -1,6 +1,6 @@
 
 
-$('.highScoreButton').click(showResults);
+$('.highScoreButton, .highScoreButtonOver').click(showResults);
 
   function showResults() {
     resetHighscoreList()
