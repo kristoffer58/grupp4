@@ -19,7 +19,7 @@ function sendNewHigscoreToServer(userScore) {
             //merge this shit and connect it with highscore window 
             // let name =  prompt("New highscore whats your name?")
             let form = $('<form id="newHigscoreForm">');
-            $(form).append('Your name:<input type="text" id="highscoreName" name="highscoreName">');
+            $(form).append('Your name:<input type="text" id="highscoreName" name="highscoreName" maxlength="5">');
             $(form).append('<button class="btn btn-primary" type="button" id="highscoreSubmit" >Submit</button>');
             $(".newHighscoreInput").append(form);
             $(".newHighscoreInput").append('</form>');
