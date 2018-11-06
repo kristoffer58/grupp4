@@ -90,4 +90,15 @@
             text-decoration: underline;
         }
     }
+    .list {
+        margin:auto;
+        text-align: center;
+    }
+
+    .row{
+        margin:0;
+    }
+    @include media-breakpoint-down(sm){
+        font-size: 15px;
+    }
 }
