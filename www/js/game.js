@@ -17,7 +17,7 @@ function loadGame() {
   let paused;
   const bricks = [];
   const keysPressed = {};
-  const initialPaddleSpeed = 300;
+  const initialPaddleSpeed = 400;
   const initialBallSpeed = 200;
   const paddle = {};
   const ball = {};
@@ -165,7 +165,7 @@ function loadGame() {
         hitSound.play();
       }
     }
-    if (bricks.length == 0) {
+    if (bricks.length == 0) { // insert spawn bricks and increase ball speed-function here. Ends at lives >1.
       paused = true;
       updateInterface();
     }
@@ -199,7 +199,7 @@ function loadGame() {
     $('.score span').text((score + '').padStart(4, '0'));
     $('.lives span').text(lives);
     $('.main-text').hide();
-    if (lives < 1) {
+    if (lives < 1) {    // reset ball speed back to initial here ??
       $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
       sendNewHigscoreToServer(score) // this one is in newHighscore.js 
      } else if (paused) {
@@ -284,11 +284,11 @@ function loadGame() {
     const brickCSS = getBrickCSS('left', 'top', 'width', 'height');
 
     const colors = [
-      'rgb(255, 0, 0)',
-      'rgb(0, 255, 0)',
       'rgb(0, 0, 255)',
-      'rgb(255, 255, 0)',
-      'rgb(255, 0, 255)',
+      'rgb(255, 255, 255)',
+      'rgb(0, 0, 255)',
+      'rgb(255, 255, 255)',
+      'rgb(0, 0, 255)',
     ];
 
     let prevLeft = brickCSS.left;

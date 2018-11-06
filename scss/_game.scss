@@ -55,7 +55,7 @@
    
   .paddle {
     width: 10vw;
-    height: 1.5vh;   
+    height: 2vh;   
     position: absolute;
     border-radius: 25px;
     bottom: 0;
@@ -85,16 +85,12 @@
       border-radius: 20% 0 0 20%;
    }
    */
-}
- 
- 
-   
+
   .brick {
     width: 5vw;
     height: 2vh;
-    left: 29%;
+    left: 29%;    // to center the cluster of bricks
     top: 40%;
-    background-color: #777;
     position: absolute;
     z-index: 1;
     border: 2px groove rgb(179, 155, 209);
