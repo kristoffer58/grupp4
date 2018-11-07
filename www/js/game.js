@@ -297,6 +297,8 @@ function loadGame() {
       paused = !paused;
     } else {
       startNewGame();
+      $('.game').show();
+      $('.newHighscoreInput').hide();
     }
 
     updateInterface();
@@ -469,4 +471,11 @@ $('.backGameOver').click(function(){
   $('.backGameOver').hide();
   $('.back').show();
   resetHighscoreList();
+});
+
+$('#highscoreSubmit').click(function(){
+  $('.startsida').show();
+  $('.highscore').hide();
+  $('.backGameOver').hide();
+  $('.back').show();
 });
