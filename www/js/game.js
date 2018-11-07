@@ -55,6 +55,7 @@ function loadGame() {
     moveBall(deltaTime);
 
     ball.speed = speedLevel;
+    paddle.speed = speedLevel * 2 - 50;
   }
 
    /*function updateGame(deltaTime) {
@@ -230,12 +231,12 @@ function loadGame() {
           }, updateSpeed);
         }, 1000);
       }
-      speedLevel = speedLevel + 100;
+      speedLevel = speedLevel + 50;
       startInterval();
       resetPaddle();
       resetBall();
       spawnBricks();
-      ball.speed = ball.speed + 100;
+      ball.speed = speedLevel;
       // must define that you are on stage <= 2 and set new initialBallSpeed to maintain ball.speed even after losing a life.
       console.log(speedLevel);
       // updateInterface();
