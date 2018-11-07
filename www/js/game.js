@@ -19,11 +19,9 @@ function loadGame() {
   const paddle = {};
   const ball = {};
   let gameBorders = loadGameBorders();
-  bgsound.loop = true;
-  bgsound.play();
   $('.game .brick').remove();
   $("#newHigscoreForm").remove();
-
+  let speedLevel = 300;
 
   // Setup key listeners before starting the first game
   setupKeyListeners();
@@ -32,8 +30,11 @@ function loadGame() {
   function startNewGame() {
     $('.startsida, .highscore, .gameOver').hide();
     $('.game').show();
-    lives = 3;
+    lives = 10;
     score = 0;
+
+    bgsound.loop = true;
+    bgsound.play();
     //paused = false;
 
     resetPaddle();
@@ -43,6 +44,7 @@ function loadGame() {
     updateInterface();
     paused = true;  // the game starts when ENTER is pressed
     startInterval();
+
   }
 
   function updateGame(deltaTime) {
@@ -51,6 +53,8 @@ function loadGame() {
 
     movePaddle(deltaTime);
     moveBall(deltaTime);
+
+    ball.speed = speedLevel;
   }
 
    /*function updateGame(deltaTime) {
@@ -202,9 +206,9 @@ function loadGame() {
       sendNewHigscoreToServer(score) // this one is in newHighscore.js
       bgsound.pause();
       bgsound.currentTime = 0;
+      speedLevel = 300;
 
      } else if (paused) {
-      bgsound.pause();
       
     } else {
       $('.main-text').text('');
@@ -212,6 +216,7 @@ function loadGame() {
 
     // when all bricks are knocked down and
     if (bricks.length<1 ) {
+
       function startInterval() {
         const updateSpeed = 10; // lower = faster
         clearInterval(window.gameInterval);
@@ -225,18 +230,18 @@ function loadGame() {
           }, updateSpeed);
         }, 1000);
       }
-
+      speedLevel = speedLevel + 100;
       startInterval();
       resetPaddle();
       resetBall();
       spawnBricks();
       ball.speed = ball.speed + 100;
-      initialBallSpeed = initialBallSpeed + 100;  // must define that you are on stage <= 2 and set new initialBallSpeed to maintain ball.speed even after losing a life.
-
+      // must define that you are on stage <= 2 and set new initialBallSpeed to maintain ball.speed even after losing a life.
+      console.log(speedLevel);
       // updateInterface();
 
       //   $('.main-text').text('CONGRATULATIONS - YOU WON');
-        sendNewHigscoreToServer(score) // this one is in newHighscore.js 
+       // sendNewHigscoreToServer(score) // this one is in newHighscore.js 
        
     $('.main-text').fadeIn(500);
     }
@@ -247,6 +252,7 @@ function loadGame() {
     keysPressed.enter = true;
 
     if (lives > 0) {
+      bgsound.pause();
       paused = !paused;
     } else {
       startNewGame();
