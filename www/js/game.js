@@ -315,7 +315,7 @@ function loadGame() {
   function resetBall() {
     ball.$ = $('.ball');
     ball.speed = initialBallSpeed;
-    ball.$.css('left', (ball.left = gameBorders.width / 2 - 15));
+    ball.$.css('left', (ball.left = gameBorders.width / 2 - ball.width));
     ball.$.css('top', (ball.top = paddle.top - paddle.height));
     ball.direction = { x: 1, y: 1 };
 
