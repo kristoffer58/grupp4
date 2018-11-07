@@ -441,6 +441,8 @@ $('.play-game').click(function() {
   $('.startsida').show();
   $('.game').hide();
   $('.highscore').hide();
+  $('.newHighscoreInput').hide();
+  $('.gameOver').hide();
   resetHighscoreList();
 });
 

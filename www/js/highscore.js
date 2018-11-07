@@ -12,18 +12,19 @@ $('.highScoreButton, .highScoreButtonOver').click(showResults);
 
     let jasonData = highScoreJson;
 
-
     $(".highscore .lista").append('<div class="list col-4" id="col1">#</div>');
-    $(".highscore .lista").append('<div class="list col" id="col2">Name</div>');
-    $(".highscore .lista").append('<div class="list col" id="col3">Score</div>');
+    $(".highscore .lista").append('<div class="list col langSv" id="col2sv">Namn</div>');
+    $(".highscore .lista").append('<div class="list col langSv" id="col3sv">Poäng</div>');
+    $(".highscore .lista").append('<div class="list col langEn" id="col2en">Name</div>');
+    $(".highscore .lista").append('<div class="list col langEn" id="col3en">Score</div>');
    
 
 
 
     for (i = 0; i < jasonData.length; i++) {
       $("#col1").append('<div>' + (i+1) + '</div>');
-      $("#col2").append('<div>' + highScoreJson[i].name + '</div>');
-      $("#col3").append('<div>' + highScoreJson[i].score + '</div>');
+      $("#col2sv, #col2en").append('<div>' + highScoreJson[i].name + '</div>');
+      $("#col3sv, #col3en").append('<div>' + highScoreJson[i].score + '</div>');
       
     }
   }

@@ -7,7 +7,7 @@
             "back":"Back",
             "score":"SCORE:",
             "lives":"LIVES:",
-            "paused":"PAUSED - press ENTER to continue..."
+            "newscore":"New High Score"
         }
         ],
       "sv": [
@@ -17,7 +17,7 @@
             "back":"Tillbaka",
             "score":"POÄNG:",
             "lives":"LIV:",
-            "paused":"PAUS - tryck ENTER för att fortsätta..."
+            "newscore":"Nytt Rekord"
         }
       ]
     }
