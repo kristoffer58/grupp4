@@ -30,5 +30,5 @@ $('.highScoreButton, .highScoreButtonOver').click(showResults);
   }
 }
 function resetHighscoreList(){
-  $("#col1, #col2, #col3").remove();
+  $("#col1, #col2sv, #col2en, #col3sv, #col3en").remove();
 }

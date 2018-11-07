@@ -21,8 +21,8 @@ function sendNewHigscoreToServer(userScore) {
             let form = $('<form id="newHigscoreForm">');
             $(form).append('<h1 class="langEn">New High Score</h1>');
             $(form).append('<h1 class="langSv">Nytt Rekord</h1>');
-            $(form).append('<input type="text" id="highscoreName" name="highscoreName" maxlength="5">');            $(form).append('<button class="btn btn-primary langEn" type="button" id="highscoreSubmit" >Submit</button>');
-            $(form).append('<button class="btn btn-primary langSv" type="button" id="highscoreSubmit" >Dela</button>');
+            $(form).append('<input type="text" id="highscoreName" name="highscoreName" maxlength="5" placeholder="Enter Name">');            $(form).append('<button class="btn btn-primary langEn" type="button" id="highscoreSubmit" >Submit</button>');
+            $(form).append('<button class="btn btn-primary" type="button" id="highscoreSubmit" >Submit</button>');
             $(".newHighscoreInput").append(form);
             $(".newHighscoreInput").append('</form>');
             score = userScore;
