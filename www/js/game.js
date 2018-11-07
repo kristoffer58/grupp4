@@ -15,9 +15,10 @@ function loadGame() {
   const bricks = [];
   const keysPressed = {};
   const initialPaddleSpeed = 500;
-  const initialBallSpeed = 300;
+  const initialBallSpeed = 250;
   const paddle = {};
   const ball = {};
+  // let paused = true;    // added
   let gameBorders = loadGameBorders();
   $('.game .brick').remove();
   $("#newHigscoreForm").remove();
@@ -48,7 +49,8 @@ function loadGame() {
   }
 
   function updateGame(deltaTime) {
-    if (paused) { return; }
+    if (paused) {  return; 
+  }
     bgsound.play();
 
     movePaddle(deltaTime);
@@ -67,14 +69,17 @@ function loadGame() {
     const direction = calculatePaddleDirection();
     const velocity = direction * paddle.speed * deltaTime;
     paddle.left += velocity;
+    if (aiming) { resetBall(); moveBall();}   // move ball on paddle while paused
     if (paddle.left < gameBorders.left) { paddle.left = 0; }
     if (paddle.left + paddle.width > gameBorders.width) { paddle.left = gameBorders.width - paddle.width; }
     paddle.$.css('left', paddle.left);
   }
 
   function moveBall(deltaTime) {
+    // if (!paused) {
     ball.left += ball.direction.x * ball.speed * deltaTime;
     ball.top += ball.direction.y * ball.speed * deltaTime;
+    // }
 
     if (!collisionDetectBallAndGame()) { return; }
     collisionDetectBallAndBricks();
@@ -122,7 +127,7 @@ function loadGame() {
 
   function collisionDetectBallAndPaddle() {
     if (!isRectAOutsideRectB(ball, paddle)) {
-      // if the ball touches first 50 pixels of the paddle and the ball approaches from left to right side - go back left
+      // 20% from left. if the ball touches first 50 pixels of the paddle and the ball approaches from left to right side - go back left
       if (ball.left <= paddle.left + paddle.width / 5){
         if(ball.direction.x >= 0) {
           ball.direction.x *= -1;  
@@ -131,7 +136,7 @@ function loadGame() {
           ball.direction.x *= +1;
         }
       }
-      // if the ball touches last 50 pixels of the paddle and the ball approaches from right to right side - go back right
+      // 20% from right. if the ball touches last 50 pixels of the paddle and the ball approaches from right to right side - go back right
       else if (ball.left >= paddle.left + paddle.width / 5 * 4){
         if (ball.direction.x <=0) {
           ball.direction.x *= -1;
@@ -299,8 +304,16 @@ function loadGame() {
   //ball position 
   function resetBall() {
     ball.$ = $('.ball');
+    // if (bricks.length<1 ){
+    //   initialBallSpeed + 100;
+    // }
+    // else {
+    //   initialBallSpeed;
+    // }
+    
     ball.speed = initialBallSpeed;
-    ball.$.css('left', (ball.left = gameBorders.width / 2 - 15));
+        
+    ball.$.css('left', (ball.left = gameBorders.width / 2 - ball.width / 2));
     ball.$.css('top', (ball.top = paddle.top - paddle.height));
     ball.direction = { x: 1, y: 1 };
 
