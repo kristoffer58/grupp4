@@ -17,3 +17,13 @@ body {
   background-color: rgba(26, 14, 73, 0.7);
 }
 
+div.startsida > p.startGame,
+div.startsida > p.highScoreButton,
+div.startsida > p.Instructions {
+  @include media-breakpoint-down(sm) {
+    font-size: 26px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 22px;
+  }
+}
