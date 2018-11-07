@@ -30,7 +30,7 @@ function loadGame() {
   function startNewGame() {
     $('.startsida, .highscore, .gameOver').hide();
     $('.game').show();
-    lives = 10;
+    lives = 3;
     score = 0;
 
     bgsound.loop = true;
@@ -123,7 +123,9 @@ function loadGame() {
 
   function collisionDetectBallAndPaddle() {
     if (!isRectAOutsideRectB(ball, paddle)) {
-      // if the ball touches first 50 pixels of the paddle and the ball approaches from left to right side - go back left
+
+      
+      // if the ball touches first 20% of the paddle and the ball approaches from LEFT to right side - go back left 45 degrees
       if (ball.left <= paddle.left + paddle.width / 5){
         if(ball.direction.x >= 0) {
           ball.direction.x *= -1;  
@@ -132,7 +134,7 @@ function loadGame() {
           ball.direction.x *= +1;
         }
       }
-      // if the ball touches last 50 pixels of the paddle and the ball approaches from right to right side - go back right
+      // if the ball touches last 20% of the paddle and the ball approaches from RIGHT to right side - go back right 45 degrees
       else if (ball.left >= paddle.left + paddle.width / 5 * 4){
         if (ball.direction.x <=0) {
           ball.direction.x *= -1;
@@ -203,11 +205,12 @@ function loadGame() {
     $('.score span, .scoreGameOver span, .newHighscoreInput span').text((score + '').padStart(4, '0'));
     $('.lives span').text(lives);
     $('.main-text').hide();
-    if (lives < 1) {    // reset ball speed back to initial here ??
+    if (lives < 1) {    
       sendNewHigscoreToServer(score) // this one is in newHighscore.js
       bgsound.pause();
       bgsound.currentTime = 0;
       speedLevel = 300;
+      $(".ball").css("background", "radial-gradient(circle at 10px 10px, #ffffff, #353535)");
 
      } else if (paused) {
       
@@ -237,6 +240,19 @@ function loadGame() {
       resetBall();
       spawnBricks();
       ball.speed = speedLevel;
+
+      function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+      
+      
+      $(".ball").css("background", "radial-gradient(circle at 10px 10px, #ffffff," + getRandomColor());
+
       // must define that you are on stage <= 2 and set new initialBallSpeed to maintain ball.speed even after losing a life.
       console.log(speedLevel);
       // updateInterface();
@@ -404,7 +420,7 @@ $('.play-game').click(function() {
 
 $('.highScoreButton').click(function(){
   $('.startsida').hide();
-  $('.highscore').css('display', 'flex');
+  $('.highscore').show();
   $('.backGameOver').hide();
   $('.back').show();
   
@@ -412,7 +428,7 @@ $('.highScoreButton').click(function(){
 
 $('.highScoreButtonOver').click(function(){
   $('.gameOver').hide();
-  $('.highscore').css('display', 'flex');
+  $('.highscore').show();
   $('.backGameOver').show();
   $('.back').hide();
 });
