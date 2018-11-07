@@ -2,6 +2,7 @@ h4 {
     color: rgb(55, 35, 145);
     font-size: 33px;
     text-align: center;
+    text-decoration: underline;
 }
 
 .instructions-modal-body {
@@ -9,11 +10,11 @@ h4 {
     text-decoration: none;
     line-height: 2em;
     font-size: 18px;
-    padding: 20px;
+    margin: 10px;
 }
 
 .instructions-modal-content   {
-    background:#f2ccff;
+    background:#fFF;
 }
 
 .instructions-modal-footer {
@@ -22,6 +23,7 @@ h4 {
 
 .instructions-modal-close-btn {
     background: #8600b3;
+    border-radius: 10%;
     margin-bottom: 20px;
     
     }
