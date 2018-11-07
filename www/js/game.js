@@ -420,7 +420,7 @@ $('.play-game').click(function() {
 
 $('.highScoreButton').click(function(){
   $('.startsida').hide();
-  $('.highscore').css('display', 'flex');
+  $('.highscore').show();
   $('.backGameOver').hide();
   $('.back').show();
   
@@ -428,7 +428,7 @@ $('.highScoreButton').click(function(){
 
 $('.highScoreButtonOver').click(function(){
   $('.gameOver').hide();
-  $('.highscore').css('display', 'flex');
+  $('.highscore').show();
   $('.backGameOver').show();
   $('.back').hide();
 });
