@@ -125,13 +125,35 @@ function loadGame() {
   function collisionDetectBallAndPaddle() {
     if (!isRectAOutsideRectB(ball, paddle)) {
 
+      let paddleLeftCorner=paddle.left; //  -> []
+      let paddleRightCorner=paddle.left+paddle.width;// [] <-
+      let paddleCenter=paddleLeftCorner+(paddle.width/2);//  [ >< ]
+      let ballCenter=ball.left+(ball.width/2) ;//  (><)
+      let ratioA=1.2; // 1.2 THIS CAN BE CHANGED FOR SPEED AND ANGLE  
+      let ratioB=3;   // 3 THIS TO.
+      let dXAngle=Math.abs(paddleCenter-ballCenter)*ratioA/(paddle.width/ratioB); 
+      //change balls direction according to the contact point
+      console.log(ballCenter);
+      console.log(paddleCenter);
+      console.log(dXAngle);
+      if (ballCenter < paddleCenter){
+        if(ball.direction.x >0) {
+          ball.direction.x=(dXAngle*(-1));
+        }
+      }
+      if (ballCenter > paddleCenter){
+        if(ball.direction.x < 0) {
+          ball.direction.x=dXAngle;
+        }
+      }
+
       // if halfXSpeed is set then "reset" to normal
       if(ball.direction.halfXSpeed){
         ball.direction.x *= 2;
         ball.direction.halfXSpeed = false;
       }
-
-      
+  //    ball.direction.x *= 2;
+/*      
       // if the ball touches first 20% of the paddle and the ball approaches from LEFT to right side - go back left 45 degrees
       if (ball.left <= paddle.left + paddle.width / 10 * 2){
         if(ball.direction.x >= 0) {
@@ -161,7 +183,7 @@ function loadGame() {
           ball.direction.halfXSpeed = true;
         }
       }
-
+*/
 
 
 
