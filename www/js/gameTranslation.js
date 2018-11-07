@@ -21,7 +21,7 @@ function gametrans(gameText){
         $('.highScoreButton, .highscore h1, .highScoreButtonOver').append(phighscore);
         $('.Instructions').append(pinstuctions);
         $('.back, .backGameOver').append(pback);
-        $('.score, .scoreGameOver').append(pscore);
+        $('.score').append(pscore);
         $('.lives').append(plives);
         $('.lives').append(livnummbers);
         $('.score').append(scorenummber);
@@ -46,7 +46,7 @@ function gametrans(gameText){
           $('.highScoreButton, .highscore h1, .highScoreButtonOver').append(phighscore);
           $('.Instructions').append(pinstuctions);
           $('.back, .backGameOver').append(pback);
-          $('.score, .scoreGameOver').append(pscore);
+          $('.score').append(pscore);
           $('.lives').append(plives);
           $('.lives').append(livnummbers);
           $('.score, .scoreGameOver, .newHighscoreInput').append(scorenummber);
