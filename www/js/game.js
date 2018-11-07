@@ -1,12 +1,9 @@
-$('.startGame, .play').click(loadGame);
-
 let hitSound = new Audio('/sounds/hit.wav');
 let liveLost = new Audio('/sounds/liveLost.wav');
 let bgsound = new Audio('/sounds/bg_music.mp3');
 
 function showGame() {
-  $('.startsida, .highscore, .gameOver').hide();
-  $('.game').show();
+  $('.game').hide();
 }
 
 function loadGame() {
@@ -30,10 +27,11 @@ function loadGame() {
 
   // Setup key listeners before starting the first game
   setupKeyListeners();
-  startNewGame();
-
+  $('.startGame, .play').click(startNewGame);
   // Reset starting variables etc
   function startNewGame() {
+    $('.startsida, .highscore, .gameOver').hide();
+    $('.game').show();
     lives = 3;
     score = 0;
     //paused = false;
@@ -203,6 +201,8 @@ function loadGame() {
     if (lives < 1) {    // reset ball speed back to initial here ??
       $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
       sendNewHigscoreToServer(score) // this one is in newHighscore.js
+      bgsound.pause();
+      bgsound.currentTime = 0;
 
      } else if (paused) {
       $('.main-text').text('PAUSED - press ENTER to continue...');
