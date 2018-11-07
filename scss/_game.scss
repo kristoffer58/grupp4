@@ -106,7 +106,7 @@
 
     -webkit-animation: rotation 2s infinite linear;
   
-  @-webkit-keyframes rotation {
+  @keyframes rotation {
       from {
           -webkit-transform: rotate(0deg);
       }
@@ -137,9 +137,4 @@
     0%   {top: 0}
     100%  {top: calc(100% - 40px)}
   }
-
-  #newHigscoreForm{
-    
-  }
-  
 }
