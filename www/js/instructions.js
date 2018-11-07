@@ -7,11 +7,11 @@ function instructions(instructionTrans) {
   lang = languageIsSwedish ? 'sv' : 'en';
 
   
-  $('#instructionsModal .modal-body').empty();
-  $('#instructionsModal .modal-body').append('<h4>' + instructionTrans.title[lang] + '</h4>');
+  $('#instructionsModal .instructions-modal-body').empty();
+  $('#instructionsModal .instructions-modal-body').append('<h4>' + instructionTrans.title[lang] + '</h4>');
   for (let desc of instructionTrans.desc[lang]) {
     let pTag = '<p>' + desc + '</p>'
-    $('#instructionsModal .modal-body').append(pTag);
+    $('#instructionsModal .instructions-modal-body').append(pTag);
   }
 }
 

@@ -4,7 +4,7 @@ h4 {
     text-align: center;
 }
 
-.modal-body {
+.instructions-modal-body {
     color: rgb(55, 35, 145);
     text-decoration: none;
     line-height: 2em;
@@ -12,8 +12,16 @@ h4 {
     padding: 20px;
 }
 
-.modal-footer {
+.instructions-modal-content   {
+    background:#f2ccff;
+}
+
+.instructions-modal-footer {
     text-align: center;
     }
 
-
+.instructions-modal-close-btn {
+    background: #8600b3;
+    margin-bottom: 20px;
+    
+    }
