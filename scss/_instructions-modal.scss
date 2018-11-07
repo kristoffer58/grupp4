@@ -27,8 +27,9 @@ h4 {
     margin-bottom: 20px;
     
     }
+
 .instructions-modal-body{
-@include media-break-point (md) {
-    font-size: 10px;
+@include media-breakpoint-down (md) {
+    font-size: 12px;
 }
 }
