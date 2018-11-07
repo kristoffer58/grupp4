@@ -38,7 +38,7 @@ function submit() {
     $('.game .brick').remove();
     $('.game').hide();
     $('.highscore').show();
-    
+    showResults();
 }
 
 $(document).on('click', '#highscoreSubmit', function() {
