@@ -1,0 +1,45 @@
+.newHighscoreInput{
+    color:white;
+    height: 70vh;
+    width: 60vw;
+    background-color: black;
+    margin: auto;
+    border: 5px groove #6c4b96;
+    display:block;
+    text-align: center;
+    position: relative;
+    display:none;
+
+    h1{
+        font-size: 5vw;
+        margin-top: 5%;
+    }
+
+    input{
+        margin-top: 20%;
+        text-align: center;
+        width: 20vw;
+        @include media-breakpoint-down(sm){
+        font-size: 10px;
+    }
+    }
+
+    button{
+        display:block;
+        margin-top: 4%;
+        position: absolute;
+        width: 100px;
+        left:50%;
+        margin-left: -50px;
+    }
+
+    span {
+        position: absolute;
+        width: 600px;
+        left:50%;
+        margin-left:-300px;
+        margin-top:20%;
+        font-size: 4vw;
+        color:white;
+    }
+}

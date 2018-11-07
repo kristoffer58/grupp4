@@ -1,8 +1,19 @@
 .modal {
   display: none; /* Hidden by default */
+  margin:auto;
+  width: 80vw;
+  }
+
+  .modal img{
+    width: 55vw;
+    border: 5px groove rgb(108, 75, 150);
   }
  
   .modal-content {
     flex-direction: row;
     justify-content: center;
-  }
+    
+  background:none;
+  border:none;
+
+    }
