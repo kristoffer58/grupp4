@@ -80,7 +80,7 @@ function loadGame() {
     console.log(ball.direction.x,"ball.direction.x")
     ball.left += ball.direction.x * ball.speed * deltaTime;
     ball.top += ball.direction.y * ball.speed * deltaTime;
-
+    
     if (!collisionDetectBallAndGame()) { return; }
     collisionDetectBallAndBricks();
     collisionDetectBallAndPaddle();
