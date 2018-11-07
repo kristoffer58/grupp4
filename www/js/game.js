@@ -123,7 +123,9 @@ function loadGame() {
 
   function collisionDetectBallAndPaddle() {
     if (!isRectAOutsideRectB(ball, paddle)) {
-      // if the ball touches first 50 pixels of the paddle and the ball approaches from left to right side - go back left
+
+      
+      // if the ball touches first 20% of the paddle and the ball approaches from LEFT to right side - go back left 45 degrees
       if (ball.left <= paddle.left + paddle.width / 5){
         if(ball.direction.x >= 0) {
           ball.direction.x *= -1;  
@@ -132,7 +134,7 @@ function loadGame() {
           ball.direction.x *= +1;
         }
       }
-      // if the ball touches last 50 pixels of the paddle and the ball approaches from right to right side - go back right
+      // if the ball touches last 20% of the paddle and the ball approaches from RIGHT to right side - go back right 45 degrees
       else if (ball.left >= paddle.left + paddle.width / 5 * 4){
         if (ball.direction.x <=0) {
           ball.direction.x *= -1;
@@ -203,7 +205,7 @@ function loadGame() {
     $('.score span, .scoreGameOver span, .newHighscoreInput span').text((score + '').padStart(4, '0'));
     $('.lives span').text(lives);
     $('.main-text').hide();
-    if (lives < 1) {    // reset ball speed back to initial here ??
+    if (lives < 1) {    
       sendNewHigscoreToServer(score) // this one is in newHighscore.js
       bgsound.pause();
       bgsound.currentTime = 0;
