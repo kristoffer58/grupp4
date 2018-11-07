@@ -74,6 +74,7 @@ function loadGame() {
   }
 
   function moveBall(deltaTime) {
+    console.log(ball.direction.x,"ball.direction.x")
     ball.left += ball.direction.x * ball.speed * deltaTime;
     ball.top += ball.direction.y * ball.speed * deltaTime;
 
@@ -124,26 +125,49 @@ function loadGame() {
   function collisionDetectBallAndPaddle() {
     if (!isRectAOutsideRectB(ball, paddle)) {
 
+      // if halfXSpeed is set then "reset" to normal
+      if(ball.direction.halfXSpeed){
+        ball.direction.x *= 2;
+        ball.direction.halfXSpeed = false;
+      }
+
       
       // if the ball touches first 20% of the paddle and the ball approaches from LEFT to right side - go back left 45 degrees
-      if (ball.left <= paddle.left + paddle.width / 5){
+      if (ball.left <= paddle.left + paddle.width / 10 * 2){
         if(ball.direction.x >= 0) {
           ball.direction.x *= -1;  
         }
-        else {
-          ball.direction.x *= +1;
-        }
       }
-      // if the ball touches last 20% of the paddle and the ball approaches from RIGHT to right side - go back right 45 degrees
-      else if (ball.left >= paddle.left + paddle.width / 5 * 4){
+
+      // if the ball touches last 20% of the paddle and the ball approaches from RIGHT to left side - go back right 45 degrees
+      else if (ball.left >= paddle.left + paddle.width / 10 * 8){
         if (ball.direction.x <=0) {
           ball.direction.x *= -1;
         }
-        else {
-          ball.direction.x *= +1;  
-        }
-        
       }
+
+      // if the ball touches 20-40% of the paddle and the ball approaches from LEFT to right side - go back right 22.5 degrees
+      else if (ball.left >= paddle.left + paddle.width / 10 * 2 && ball.left <= paddle.left + paddle.width / 10 * 4){
+        if (ball.direction.x >= 0) {
+          ball.direction.x *= -0.5;
+          ball.direction.halfXSpeed = true;
+        }
+      }
+
+      // if the ball touches 60-80% of the paddle and the ball approaches from RIGHT to left side - go back right 22.5 degrees
+      else if (ball.left >= paddle.left + paddle.width / 10 * 6 && ball.left <= paddle.left + paddle.width / 10 * 8){
+        if (ball.direction.x >= 0) {
+          ball.direction.x *= +0.5;
+          ball.direction.halfXSpeed = true;
+        }
+      }
+
+
+
+
+
+
+
 
       ball.direction.y *= -1;
       ball.top = paddle.top - ball.height;

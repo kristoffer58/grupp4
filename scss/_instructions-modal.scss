@@ -14,7 +14,7 @@ h4 {
 }
 
 .instructions-modal-content   {
-    background:#fFF;
+    background:#FFF;
 }
 
 .instructions-modal-footer {
@@ -25,7 +25,9 @@ h4 {
     background: #8600b3;
     border-radius: 10%;
     margin-bottom: 20px;
-    
+    &:hover {
+        cursor: pointer;
+        }
     }
 
 .instructions-modal-body{
