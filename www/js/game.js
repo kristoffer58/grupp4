@@ -30,7 +30,7 @@ function loadGame() {
   function startNewGame() {
     $('.startsida, .highscore, .gameOver').hide();
     $('.game').show();
-    lives = 10;
+    lives = 3;
     score = 0;
 
     bgsound.loop = true;
@@ -208,6 +208,7 @@ function loadGame() {
       bgsound.pause();
       bgsound.currentTime = 0;
       speedLevel = 300;
+      $(".ball").css("background", "radial-gradient(circle at 10px 10px, #ffffff, #353535)");
 
      } else if (paused) {
       
@@ -237,6 +238,19 @@ function loadGame() {
       resetBall();
       spawnBricks();
       ball.speed = speedLevel;
+
+      function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+      
+      
+      $(".ball").css("background", "radial-gradient(circle at 10px 10px, #ffffff," + getRandomColor());
+
       // must define that you are on stage <= 2 and set new initialBallSpeed to maintain ball.speed even after losing a life.
       console.log(speedLevel);
       // updateInterface();
