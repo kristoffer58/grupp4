@@ -199,13 +199,11 @@ function loadGame() {
     $('.lives span').text(lives);
     $('.main-text').hide();
     if (lives < 1) {    // reset ball speed back to initial here ??
-      $('.main-text').text('GAME OVER - PRESS ENTER TO PLAY AGAIN');
       sendNewHigscoreToServer(score) // this one is in newHighscore.js
       bgsound.pause();
       bgsound.currentTime = 0;
 
      } else if (paused) {
-      $('.main-text').text('PAUSED - press ENTER to continue...');
       bgsound.pause();
       
     } else {

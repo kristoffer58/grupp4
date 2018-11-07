@@ -18,7 +18,7 @@ window.addEventListener("popstate", () => {
 
 // On page load
 frontendRouter(location.pathname);
-
+loadGame();
 // The router (do whatever you want here)
 function frontendRouter(path) {
   clearInterval(window.gameInterval);
@@ -35,7 +35,6 @@ function frontendRouter(path) {
     '/game': () => {
       $('body main > *').hide(); $('.Spela').show();
       changeActiveLink('play-game');
-      loadGame();
     },
     '/404': () => {
       $('body main > *').hide(); $('.the404').show();
