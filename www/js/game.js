@@ -24,20 +24,20 @@ function loadGame() {
   let gameBorders = loadGameBorders();
   bgsound.loop = true;
   bgsound.play();
-  $('.game .brick').remove();
-  $("#newHigscoreForm").remove();
+ 
 
 
   // Setup key listeners before starting the first game
-  setupKeyListeners();
+ 
   startNewGame();
-
+ 
   // Reset starting variables etc
   function startNewGame() {
     lives = 3;
     score = 0;
     //paused = false;
-
+ $('.game .brick').remove();
+  $("#newHigscoreForm").remove();
     resetPaddle();
     resetBall();
     spawnBricks();
@@ -46,7 +46,7 @@ function loadGame() {
     paused = true;  // the game starts when ENTER is pressed
     startInterval();
   }
-
+setupKeyListeners();
   function updateGame(deltaTime) {
     if (paused) { return; }
 
@@ -226,7 +226,6 @@ function loadGame() {
       startNewGame();
     }
 
-    updateInterface();
   }
 
   function setupKeyListeners() {

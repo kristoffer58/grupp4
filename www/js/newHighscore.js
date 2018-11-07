@@ -33,7 +33,7 @@ function submit() {
         $.post("/add-score",{name,score},null);
     console.log(name);
     console.log((score));
-    showResults();
+    resetHighscoreList();
     $("#newHigscoreForm").remove();
     $('.game .brick').remove();
     $('.game').hide();
