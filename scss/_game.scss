@@ -54,7 +54,7 @@
   }
    
   .paddle {
-    width: 8vw;  // default 10vw
+    width: 10vw;  // default 10vw
     height: 2vh;  // default 2vh
     position: absolute;
     border-radius: 25px;
@@ -99,8 +99,8 @@
    
   .ball {
     position: absolute;
-    height: 3vh;
-    width: 3vh;
+    height: 2vh;
+    width: 2vh;
     background: radial-gradient(circle at 10px 10px, #ffffff, rgb(53, 53, 53));
     border-radius: 50%;
 
