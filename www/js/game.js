@@ -129,7 +129,6 @@ function loadGame() {
     if (!isRectAOutsideRectB(ball, paddle)) {
 
       let paddleLeftCorner=paddle.left; //  -> []
-      let paddleRightCorner=paddle.left+paddle.width;// [] <-
       let paddleCenter=paddleLeftCorner+(paddle.width/2);//  [ >< ]
       let ballCenter=ball.left+(ball.width/2) ;//  (><)
       let ratioA=1.; // 1.2 THIS CAN BE CHANGED FOR SPEED AND ANGLE  
@@ -150,10 +149,10 @@ function loadGame() {
       }
 
       // if halfXSpeed is set then "reset" to normal
-      if(ball.direction.halfXSpeed){
-        ball.direction.x *= 2;
-        ball.direction.halfXSpeed = false;
-      }
+      // if(ball.direction.halfXSpeed){
+      //   ball.direction.x *= 2;
+      //   ball.direction.halfXSpeed = false;
+      // }
  
       ball.direction.y *= -1;
       ball.top = paddle.top - ball.height;
@@ -267,8 +266,7 @@ function loadGame() {
       console.log(speedLevel);
       // updateInterface();
 
-      //   $('.main-text').text('CONGRATULATIONS - YOU WON');
-       // sendNewHigscoreToServer(score) // this one is in newHighscore.js 
+      //   $('.main-text').text('CONGRATULATIONS - YOU WON'); 
        
     $('.main-text').fadeIn(500);
     }
