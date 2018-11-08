@@ -1,19 +1,16 @@
 .modal {
   display: none; /* Hidden by default */
   margin:auto;
-  width: 98vw;
+  width: 100vw;
   }
 
- 
-    .modal img {
-      border: 5px groove rgb(108, 75, 150);
-  }
-  @media (max-width: 797px) and (min-width: 300px){
   .modal img {
-    width: 303px;
-    height: 258px;
+    width: 55vw;
+    border: 5px groove rgb(108, 75, 150);
+    @media (max-width: 575px){
+      width: 95vw;
+    }
   }
-}
  
   .lightbox {
     flex-direction: row;
