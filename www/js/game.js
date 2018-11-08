@@ -77,7 +77,7 @@ function loadGame() {
   }
 
   function moveBall(deltaTime) {
-    console.log(ball.direction.x,"ball.direction.x")
+    // console.log(ball.direction.x,"ball.direction.x")
     ball.left += ball.direction.x * ball.speed * deltaTime;
     ball.top += ball.direction.y * ball.speed * deltaTime;
     
@@ -135,9 +135,9 @@ function loadGame() {
       let ratioB=3;   // 3 THIS TO.
       //bounce angle
       let dXAngle=Math.abs(paddleCenter-ballCenter)*ratioA/(paddle.width/ratioB); 
-      console.log(ballCenter);
-      console.log(paddleCenter);
-      console.log(dXAngle);
+      // console.log(ballCenter);
+      // console.log(paddleCenter);
+      // console.log(dXAngle);
 
       if (ballCenter < paddleCenter){
        ball.direction.x=(dXAngle*(-1));
