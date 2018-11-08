@@ -4,10 +4,13 @@
   width: 80vw;
   }
 
-  .modal img{
-    width: 55vw;
+  @media (max-width: 797px) and (min-width: 300px){
+  .modal img {
+    width: 400px;
+    height: 300px;
     border: 5px groove rgb(108, 75, 150);
   }
+}
  
   .lightbox {
     flex-direction: row;
