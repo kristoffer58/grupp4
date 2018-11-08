@@ -128,50 +128,33 @@ function loadGame() {
   function collisionDetectBallAndPaddle() {
     if (!isRectAOutsideRectB(ball, paddle)) {
 
+      let paddleLeftCorner=paddle.left; //  -> []
+      let paddleRightCorner=paddle.left+paddle.width;// [] <-
+      let paddleCenter=paddleLeftCorner+(paddle.width/2);//  [ >< ]
+      let ballCenter=ball.left+(ball.width/2) ;//  (><)
+      let ratioA=1.; // 1.2 THIS CAN BE CHANGED FOR SPEED AND ANGLE  
+      let ratioB=3;   // 3 THIS TO.
+      //bounce angle
+      let dXAngle=Math.abs(paddleCenter-ballCenter)*ratioA/(paddle.width/ratioB); 
+      console.log(ballCenter);
+      console.log(paddleCenter);
+      console.log(dXAngle);
+
+      if (ballCenter < paddleCenter){
+       ball.direction.x=(dXAngle*(-1));
+        
+      }
+      if (ballCenter > paddleCenter){
+         ball.direction.x=dXAngle;
+        
+      }
+
       // if halfXSpeed is set then "reset" to normal
       if(ball.direction.halfXSpeed){
         ball.direction.x *= 2;
         ball.direction.halfXSpeed = false;
       }
-
-      
-      // if the ball touches first 20% of the paddle and the ball approaches from LEFT to right side - go back left 45 degrees
-      if (ball.left <= paddle.left + paddle.width / 10 * 2){
-        if(ball.direction.x >= 0) {
-          ball.direction.x *= -1;  
-        }
-      }
-
-      // if the ball touches last 20% of the paddle and the ball approaches from RIGHT to left side - go back right 45 degrees
-      else if (ball.left >= paddle.left + paddle.width / 10 * 8){
-        if (ball.direction.x <=0) {
-          ball.direction.x *= -1;
-        }
-      }
-
-      // if the ball touches 20-40% of the paddle and the ball approaches from LEFT to right side - go back right 22.5 degrees
-      else if (ball.left >= paddle.left + paddle.width / 10 * 2 && ball.left <= paddle.left + paddle.width / 10 * 4){
-        if (ball.direction.x >= 0) {
-          ball.direction.x *= -0.5;
-          ball.direction.halfXSpeed = true;
-        }
-      }
-
-      // if the ball touches 60-80% of the paddle and the ball approaches from RIGHT to left side - go back right 22.5 degrees
-      else if (ball.left >= paddle.left + paddle.width / 10 * 6 && ball.left <= paddle.left + paddle.width / 10 * 8){
-        if (ball.direction.x >= 0) {
-          ball.direction.x *= +0.5;
-          ball.direction.halfXSpeed = true;
-        }
-      }
-
-
-
-
-
-
-
-
+ 
       ball.direction.y *= -1;
       ball.top = paddle.top - ball.height;
       score += 5;
