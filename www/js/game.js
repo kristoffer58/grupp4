@@ -49,7 +49,7 @@ function loadGame() {
 
   function updateGame(deltaTime) {
     if (paused) { 
-      movePaddle(deltaTime);    // able to move paddle in paused mode.
+      // movePaddle(deltaTime);    // able to move paddle in paused mode.
       return;
     }
     bgsound.play();
