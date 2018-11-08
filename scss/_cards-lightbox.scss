@@ -4,11 +4,14 @@
   width: 80vw;
   }
 
+ 
+    .modal img {
+      border: 5px groove rgb(108, 75, 150);
+  }
   @media (max-width: 797px) and (min-width: 300px){
   .modal img {
-    width: 400px;
-    height: 300px;
-    border: 5px groove rgb(108, 75, 150);
+    width: 303px;
+    height: 258px;
   }
 }
  
