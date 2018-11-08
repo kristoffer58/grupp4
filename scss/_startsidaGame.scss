@@ -16,12 +16,12 @@ h1{
 
 .startGame{
     position: absolute;
-    width: 250px;
+    width: 300px;
     left:50%;
-    margin-left:-125px;
+    margin-left:-150px;
     top:45%;
     vertical-align:middle;
-    font-size: 4vh;
+    font-size: 3vh;
     color:#007bff;
 
     &:hover{
@@ -44,12 +44,12 @@ h1{
 
 .highScoreButton{
     position: absolute;
-    width: 250px;
+    width: 300px;
     top: 57%;
     left:50%;
-    margin-left:-125px;
+    margin-left:-150px;
     text-align: center;
-    font-size: 4vh;
+    font-size: 3vh;
     color:#007bff;
 
     &:hover{
@@ -73,12 +73,12 @@ h1{
 
 .Instructions {
     position: absolute;
-    width: 250px;
+    width: 300px;
     top: 69%;
     left: 50%;
-    margin-left:-125px;
+    margin-left:-150px;
     text-align: center;
-    font-size: 4vh;
+    font-size: 3vh;
     color:#007bff;
 
     &:hover{
