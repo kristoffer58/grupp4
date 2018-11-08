@@ -1,0 +1,32 @@
+$md-size: 990px;
+ .directionButtons {
+   display: none;
+   @media screen and (max-width: $md-size){
+   display: inline-block;
+   bottom:60px;
+   position: absolute;
+   width: 100%;
+   z-index: 2000;
+   opacity: 0.5;
+   
+   .mobile-buttons {
+     position: relative;
+     top: -200px;
+   }
+   }
+    button {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      outline: none;
+      &.buttonLeft {
+       margin-left: 15px;
+       @include circle(60px);
+     }
+     &.buttonRight {
+       margin-right: 15px;
+       float: right;
+       @include circle(60px);
+     }
+   }
+ }

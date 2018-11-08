@@ -165,13 +165,6 @@ function loadGame() {
         }
       }
 
-
-
-
-
-
-
-
       ball.direction.y *= -1;
       ball.top = paddle.top - ball.height;
       score += 5;
@@ -217,7 +210,7 @@ function loadGame() {
   // Changes the ball's direction after collision with bricks
   function getHorizontalOrVerticalDirection(objA, objB) {
     
-    return 'vertical'; // Always return 'vertical' for non-square bricks
+    //return 'vertical'; // Always return 'vertical' for non-square bricks
     // Todo: fix code for rectangle bricks
     const aY = objA.top + objA.height / 2;
     const aX = objA.left + objA.width / 2;
@@ -320,6 +313,24 @@ function loadGame() {
       if (e.which === 13) { keysPressed.enter = false; }
     });
   }
+
+  // $('.buttonLeft').on('touchstart', function () {
+  //   console.log('LEFT PRESSED');
+  //   keysPressed.left = true;
+  // });
+  
+  // $('.buttonLeft').on('touchend', function () {
+  //   console.log('LEFT RELEASED');
+  //   keysPressed.left = false;
+  // });
+  
+  // $('.buttonRight').on('touchstart', function () {
+  //   keysPressed.right = true;
+  // });
+  
+  // $('.buttonRight').on('touchend', function () {
+  //   keysPressed.right = false;
+  // });
 
   function loadGameBorders(){
     return {
