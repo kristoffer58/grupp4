@@ -283,6 +283,7 @@ function loadGame() {
       startNewGame();
       $('.game').show();
       $('.newHighscoreInput').hide();
+      $("#newHigscoreForm").remove();
     }
 
     updateInterface();
