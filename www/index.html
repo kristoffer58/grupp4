@@ -28,7 +28,7 @@
 					</li>
 				</ul>
 			</div>
-			<!--the flag still jumps into the hamburger on click-->
+
 			<figure class="flag mt-2 mr-2">
 				<img id="engelska" src="/images/england.svg" alt="English">
 				<img id="svenska" src="/images/sweden.svg" alt="Swedish">
@@ -94,20 +94,8 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
-
-			<div class="modal fade" id="cardsModal" role="dialog">
-				<div class="modal-dialog modal-dialog-centered modal-sm">
-					<div class="modal-content lightbox">
-						<div class="cards-modal-body">
-							<img src="/images/breakout1.PNG" alt="Card image cap" data-dismiss="modal">
-						</div>
-					</div>
-				</div>
-			</div>
-
 		</section>
 
 		<section class="Historia">
@@ -129,7 +117,6 @@
 								<h2>STEVE JOBS + STEVE WOZNIAK = BREAKOUT!</h2>
 								<div class="carousel">
 									<div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-									
 										<div class="carousel-inner">
 											<div class="carousel-item active">
 												<img class="d-block w-100" src="/images/carouselPic1.jpg" alt="First slide">
@@ -194,10 +181,12 @@
 									<img class="flyer-pic2 img-fluid" src="/images/breakout3.png">
 								</div>
 							</div>
+						</section>
 					</div>
+				</div>
 		</section>
 		</div>
-		
+
 		</section>
 
 		<section class="Spela mt-4">
@@ -226,9 +215,9 @@
 				<!-- <p class="backGameOver"></p> -->
 				<div class="d-flex justify-content-between">
 
-				<p class="back"></p>
-				<p class="backGameOver"></p>
-				<p class="play">Spela</p>
+					<p class="back"></p>
+					<p class="backGameOver"></p>
+					<p class="play">Spela</p>
 				</div>
 			</div>
 
@@ -239,14 +228,24 @@
 
 				<p class='highScoreButtonOver'></p>
 				<p class="Instructions" data-toggle="modal" data-target="#instructionsModal"></p>
-				
+
 				<p class="back"></p>
 				<p class="play">Spela</p>
 			</div>
 		</section>
 
+		<div class="modal fade" id="cardsModal" role="dialog">
+			<div class="modal-dialog modal-dialog-centered modal-sm">
+				<div class="modal-content lightbox">
+					<div class="cards-modal-body">
+						<img src="/images/breakout1.PNG" alt="Card image cap" data-dismiss="modal">
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructionsModalTitle"
-		aria-hidden="true">
+		 aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-lg">
 				<div class="instructions-modal-content d-block">
 					<div class="instructions-modal-body text-left">
